@@ -5,7 +5,7 @@
 <mapper namespace="com.example.demo.ProductDAO">
 	<insert id="insertProduct" parameterType="com.example.demo.ProductVO">
 		insert into product(seq, name, type, category, link)
-		values((select nvl(max(seq), 0)+1 from board), #name#, #type#, #category#, #link#)
+		values((select nvl(max(seq), 0)+1 from product), #name#, #type#, #category#, #link#)
 	</insert>
 	
 	<update id="updateProduct" parameterType="com.example.demo.ProductVO">

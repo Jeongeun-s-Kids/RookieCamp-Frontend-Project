@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.SatisfactionDAO">
+	<insert id="insertSatisfaction" parameterType="com.example.demo.SatisfactionVO">
+		insert into satisfaction(seq, rating, dissatisfaction_content, write_date)
+		values((select nvl(max(seq), 0)+1 from satisfaction), #rating#, #dissatisfaction_content#, #write_date#)
+	</insert>
+	
+	<update id="updateSatisfaction" parameterType="com.example.demo.SatisfactionVO">
+		update satisfaction set rating=#rating#, dissatisfaction_content=#dissatisfaction_content#, write_date=#write_date# where seq=#seq#
+	</update>
+	
+	<delete id="deleteSatisfaction" parameterType="com.example.demo.SatisfactionVO">
+		delete satisfaction where seq=#seq#
+	</delete>
+	
+	<select id="getSatisfaction" parameterType="com.example.demo.SatisfactionVO" resultType="com.example.demo.SatisfactionVO">
+		select * from satisfaction where seq=#seq#
+	</select>
+	
+	<select id="getSatisfactionList" parameterType="com.example.demo.SatisfactionVO" resultType="com.example.demo.SatisfactionVO">
+		select * from satisfaction order by seq desc
+	</select>
+</mapper>
