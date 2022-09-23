@@ -2,25 +2,25 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.ProductDAO">
-	<insert id="insertProduct" parameterType="com.example.demo.ProductVO">
-		insert into product(seq, name, type, category, link)
-		values((select nvl(max(seq), 0)+1 from product), #name#, #type#, #category#, #link#)
+<mapper namespace="com.example.demo.model.dao.ProductDAO">
+	<insert id="insert" parameterType="com.example.demo.model.vo.ProductVO">
+		insert into product(name, type, category, link)
+		values(#{name}, #{type}, #{category}, #{link})
 	</insert>
 	
-	<update id="updateProduct" parameterType="com.example.demo.ProductVO">
-		update product set name=#name#, type=#type#, category=#category# where seq=#seq#
+	<update id="update" parameterType="com.example.demo.model.vo.ProductVO">
+		update product set name=#{name}, type=#{type}, category=#{category} where seq=#{seq}
 	</update>
 	
-	<delete id="deleteProduct" parameterType="com.example.demo.ProductVO">
-		delete product where seq=#seq#
+	<delete id="delete" parameterType="com.example.demo.model.vo.ProductVO">
+		delete product where seq=#{seq}
 	</delete>
 	
-	<select id="getProduct" parameterType="com.example.demo.ProductVO" resultType="com.example.demo.ProductVO">
-		select * from product where seq=#seq#
+	<select id="select" parameterType="com.example.demo.model.vo.ProductVO" resultType="com.example.demo.model.vo.ProductVO">
+		select * from product where seq=#{seq}
 	</select>
 	
-	<select id="getProductList" parameterType="com.example.demo.ProductVO" resultType="com.example.demo.ProductVO">
+	<select id="selectAll" resultType="com.example.demo.model.vo.ProductVO">
 		select * from product order by seq desc
 	</select>
 </mapper>

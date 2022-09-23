@@ -15,6 +15,7 @@ public class Util {
         }
         return null;
     }
+
     public static void close(PreparedStatement stmt, Connection conn){
         try{
             if(stmt != null)
@@ -33,6 +34,7 @@ public class Util {
 			conn = null;
 		}
     }
+    
     public static void close(ResultSet rs, PreparedStatement stmt, Connection conn) {
 		try {
 			if(rs != null)

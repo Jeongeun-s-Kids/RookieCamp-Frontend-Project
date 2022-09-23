@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model.vo;
 
 import java.sql.Date;
 import lombok.Data;
