@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.ProductDAO">
+	<insert id="insertProduct" parameterType="com.example.demo.ProductVO">
+		insert into product(seq, name, type, category, link)
+		values((select nvl(max(seq), 0)+1 from board), #name#, #type#, #category#, #link#)
+	</insert>
+	
+	<update id="updateProduct" parameterType="com.example.demo.ProductVO">
+		update product set name=#name#, type=#type#, category=#category# where seq=#seq#
+	</update>
+	
+	<delete id="deleteProduct" parameterType="com.example.demo.ProductVO">
+		delete product where seq=#seq#
+	</delete>
+	
+	<select id="getProduct" parameterType="com.example.demo.ProductVO" resultType="com.example.demo.ProductVO">
+		select * from product where seq=#seq#
+	</select>
+	
+	<select id="getProductList" parameterType="com.example.demo.ProductVO" resultType="com.example.demo.ProductVO">
+		select * from product order by seq desc
+	</select>
+</mapper>
