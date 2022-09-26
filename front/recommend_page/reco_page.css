@@ -8,7 +8,10 @@ body{
 
 .content{
     position: relative;
+    width: 360px;
+    height: 220px;
 }
+
 
 .circle{
     position: relative;
@@ -69,6 +72,11 @@ body{
     border-radius: 30px;
     margin-left: 40px;
     margin-top: 30px;
+    transition: box-shadow .3s;
+}
+
+#explainText:hover{
+    box-shadow: 0 0 5px rgb(255, 255, 255); 
 }
 
 #subject{
