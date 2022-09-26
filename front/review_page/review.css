@@ -1,0 +1,193 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url('./bg.jpg'); /* 배경 이미지 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body.dimmed::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255, 0.75);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);    
+}
+.popup {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 500px;
+    max-width: 700px;
+    min-height: 300px;
+    max-height: 500px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
+}
+.popup > .contents .title{
+    border-radius: 15px 15px 0 0;
+    margin-top:5px;
+    /* min-height: 40px; */
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-size:30px;
+    /* background-color: #4E74F8; */
+    /* padding: 10px 15px; */
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.popup > .contents {
+    padding: 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.popup > .review {
+    text-align: center;
+
+}
+
+.input-box{
+    position:relative;
+    margin:10px 0;
+}
+
+.input-box > input{
+    background:transparent;
+    border:none;
+    border-bottom: solid 1px black;
+    padding:20px 0px 5px 0px;
+    font-size:14pt;
+    width:100%;
+}
+
+.input-box > input:focus {
+    outline:none;
+  }
+
+.popup > .cmd {
+    bottom: 0;
+    min-height: 40px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0 0 15px 15px;
+    padding-bottom: 50px;
+}
+
+.popup > .cmd .cmd1{
+    display:inline-block;
+    margin-right: 30px;
+}
+
+.popup > .cmd .cmd2{
+    display:inline-block;
+}
+
+.popup > .cmd .button {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    background: #0d0a6c;
+    width: 130px;
+    padding: 5px 10px;
+    color: white;
+}
+.popup > .cmd .button:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    
+}
+
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    direction: rtl; /* 이모지 순서 반전 */
+    border: 0; /* 필드셋 테두리 제거 */
+}
+/* #myform fieldset legend{
+    text-align: left;
+} */
+#myform input[type=radio]{
+    display: none; /* 라디오박스 감춤 */
+}
+
+#myform label{
+    font-size: 2.4em; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+}
+
+#myform label[for=rate1]:hover{
+    text-shadow: 0 0 0 #021d75; /* 마우스 호버 */
+}
+
+#myform label[for=rate2]:hover{
+    text-shadow: 0 0 0 #052AA8; /* 마우스 호버 */
+}
+
+#myform label[for=rate3]:hover{
+    text-shadow: 0 0 0 #1845DF; /* 마우스 호버 */
+}
+
+#myform label[for=rate4]:hover{
+    text-shadow: 0 0 0 #4E74F8; /* 마우스 호버 */
+}
+
+#myform label[for=rate5]:hover{
+    text-shadow: 0 0 0 #6786F2; /* 마우스 호버 */
+}
+
+
+#myform label:hover ~ label[for=rate1]{
+    text-shadow: 0 0 0 #021d75; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform label:hover ~ label[for=rate2]{
+    text-shadow: 0 0 0 #052AA8; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform label:hover ~ label[for=rate3]{
+    text-shadow: 0 0 0 #1845DF; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform label:hover ~ label[for=rate4]{
+    text-shadow: 0 0 0 #4E74F8; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform label:hover ~ label[for=rate5]{
+    text-shadow: 0 0 0 #6786F2; /* 마우스 호버 뒤에오는 이모지들 */
+}
+
+#myform input[type=radio]:checked ~ label[for=rate1]{
+    text-shadow: 0 0 0 #021d75; /* 마우스 클릭 체크 */
+}
+
+#myform input[type=radio]:checked ~ label[for=rate2]{
+    text-shadow: 0 0 0 #052AA8; /* 마우스 클릭 체크 */
+}
+
+#myform input[type=radio]:checked ~ label[for=rate3]{
+    text-shadow: 0 0 0 #1845DF; /* 마우스 클릭 체크 */
+}
+
+#myform input[type=radio]:checked ~ label[for=rate4]{
+    text-shadow: 0 0 0 #4E74F8; /* 마우스 클릭 체크 */
+}
+
+#myform input[type=radio]:checked ~ label[for=rate5]{
+    text-shadow: 0 0 0 #6786F2; /* 마우스 클릭 체크 */
+}
+
+
