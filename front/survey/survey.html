@@ -73,6 +73,7 @@
                 background: #FFFFFF;
                 box-shadow: 0px 0px 15px #FFFFFF;
             }
+            
         </style>
         <script>
             $(document).ready(function(){
@@ -88,9 +89,18 @@
                 $('.card2').each(function(index){
                     $(this).attr('card2-index', index);
                 }).click(function(){
+                    var idx_arr = [0,0,0,0,0]
                     var index = $(this).attr('card2-index');
-                    $('.card2[card2-index=' + index + ']').addClass('clicked_card2');
-                    $('.card2[card2-index!=' + index + ']').removeClass('clicked_card2');
+                    idx_arr[index] += 1;
+                    console.log(index);
+                    if(idx_arr[index]==1){
+                        $('.card2[card2-index=' + index + ']').addClass('clicked_card2');
+                        
+                    }
+                    else if(idx_arr[index]!=1){
+                        $('.card2[card2-index!=' + index + ']').removeClass('clicked_card2');
+                        idx_arr[index] = 0;
+                    }
                 });
             });
         </script>
@@ -208,7 +218,7 @@
                     </div>
                 </div>
                 <!-- 결과보기 -->
-                <div class="bottom mt-4">
+                <div class="bottom mt-4" onclick="location.href='../recommend_page/reco_page.html'">
                     <button class="r-bts bg-grey text-center p-3 fs-5 fw-bold" style="margin: auto; display: block;">결과 확인</button>
                 </div>
             </div>        
