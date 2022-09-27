@@ -22,15 +22,12 @@ body.dimmed::before{
     backdrop-filter: blur(5px);    
 }
 .popup {
-    z-index: 1;
+    background-color: whitesmoke;
     position: absolute;
     top: 25%;
+    width:100%;
     left: 50%;
     transform: translate(-50%,-50%);
-    min-width: 500px;
-    max-width: 700px;
-    min-height: 300px;
-    max-height: 500px;
     /* background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%); */
