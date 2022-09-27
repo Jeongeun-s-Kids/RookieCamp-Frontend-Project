@@ -370,7 +370,7 @@ strong,.bold {font-weight:500;}
 .lt_gray {font-weight:inherit; color:#898786;}
 .letter_break {word-break:break-all;}
 .tit01,.tit02,.tit03,.tit04,.tit06 {font-weight:500;}
-.tit00 {font-size:40px; line-height:54px; color:#222; font-family:'tgothic';}/*bx*/
+.tit00 {font-size:40px; line-height:54px; color:#222; font-family:'tgothic'; font-weight: bold;}/*bx*/
 .tit01 {font-size:30px; line-height:45px; word-break:keep-all; color:#222; font-family:'tgothic';}/*bx*/
 .tit02 {font-size:24px; line-height:36px; color:#222; font-family:'tgothic';}/*bx*/
 .tit02_l {font-size:26px; font-weight:500; line-height:39px; color:#222;}
@@ -915,7 +915,7 @@ strong,.bold {font-weight:500;}
 .btn_wrap .btn:first-child {margin-left:0 !important;}
 .btn {display:inline-block; box-sizing:border-box; text-align:center; vertical-align:top;}
 .btn.va_m {vertical-align:middle;}
-.btn.h60 {font-size:18px; line-height:58px; min-width:240px; height:60px; margin:0 2px; padding:0 30px; border-radius:22px 22px 0 22px;}/*bx*/
+.btn.h60 {font-size:18px; line-height:58px; min-width:240px; height:60px; margin:0 2px; padding:0 30px; border-radius:22px 22px 22px 22px;}/*bx*/
 .multi_btn .btn.h60 {min-width:200px;}
 .btn.h50 {font-size:18px; line-height:48px; min-width:130px; height:50px; padding:0 30px; border-radius:20px 20px 0 20px;}/*bx*/
 .btn.h34 {font-size:13px; line-height:34px; min-width:68px; height:34px; padding:0 10px;}
