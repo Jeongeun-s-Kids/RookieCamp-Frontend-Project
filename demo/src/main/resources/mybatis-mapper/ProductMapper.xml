@@ -23,4 +23,16 @@
 	<select id="selectAll" resultType="com.example.demo.model.vo.ProductVO">
 		select * from product order by seq desc
 	</select>
+
+	<select id="selectOne" parameterType="com.example.demo.model.vo.SearchVO" resultType="com.example.demo.model.vo.ProductVO">
+		select * from product where type in (#{category}) and category in(#{product1})
+	</select>
+
+	<select id="selectTwo" parameterType="com.example.demo.model.vo.SearchVO" resultType="com.example.demo.model.vo.ProductVO">
+		select * from product where type in (#{category}) and category in(#{product1},#{product2})
+	</select>
+
+	<select id="selectThree" parameterType="com.example.demo.model.vo.SearchVO" resultType="com.example.demo.model.vo.ProductVO">
+		select * from product where type in (#{category}) and category in(#{product1},#{product2},#{product3})
+	</select>
 </mapper>
