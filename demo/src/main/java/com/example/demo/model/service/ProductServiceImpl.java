@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.dao.ProductDAO;
 import com.example.demo.model.vo.ProductVO;
+import com.example.demo.model.vo.SearchVO;
 
 @Repository
 @Component
@@ -38,5 +39,20 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public List<ProductVO> getProductList() {
         return pDao.selectAll();
+    }
+
+    @Override
+    public List<ProductVO> getProductOne(SearchVO vo) {
+        return pDao.selectOne(vo);
+    }
+
+    @Override
+    public List<ProductVO> getProductTwo(SearchVO vo) {
+        return pDao.selectTwo(vo);
+    }
+
+    @Override
+    public List<ProductVO> getProductThree(SearchVO vo) {
+        return pDao.selectThree(vo);
     }
 }
