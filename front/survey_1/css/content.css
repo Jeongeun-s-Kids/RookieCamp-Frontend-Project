@@ -106,7 +106,7 @@
 .option_select_wrap .lists {position:relative; float:left; box-sizing:border-box; width:410px; padding:0 30px;}
 .option_select_wrap .lists:after {content:''; display:block; clear:both;}
 .option_select_wrap .lists:first-child:after {display:none;}
-.option_select_wrap .qst_tit {font-size:24px; line-height:36px; height:108px;}
+.option_select_wrap .qst_tit {font-size:24px; line-height:36px; height:70px;}
 .option_select_wrap .qst_tit span.step {display:block; font-weight:500;}
 .option_select_wrap .qst_tit span.s_txt {display:inline-block; font-size:14px; line-height:21px; margin-left:30px; color:#898786;}
 .option_select_wrap .option_slt {margin-top:30px;}
