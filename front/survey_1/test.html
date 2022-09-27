@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap icons / font-awesome icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/content.css" rel="stylesheet" />
+    <!-- js -->
+    <script src='http://code.jquery.com/jquery-3.3.1.js'></script>
+    <title>Document</title>
+</head>
+<body>
+        <div id="containers" aria-hidden="false">
+            <div id="contents" class="customer_center">
+                <div class="conts_box case last ui_fitprod">
+
+                    <div class="option_select_wrap">
+                        
+                        <div class="lists">
+                            <p class="qst_tit"><span class="step">Step 1.</span>사업 규모를 선택해주세요</p> <!-- 180222_수정 [텍스트 현향화] -->
+                            <ul id="lists_1" class="option_slt">
+
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate1_1" name="option_cate1" data-rename="대기업" value="R101">
+                                            <label for="option_cate1_1">대기업</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate1_2" name="option_cate1" data-rename="중견기업" value="R102">
+                                            <label for="option_cate1_2">중견기업</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate1_3" name="option_cate1" data-rename="자영업 및 창업" value="R103" checked="">
+                                            <label for="option_cate1_3">자영업 및 창업</label>
+                                        </span>
+                                    </li>
+                                
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="lists">
+                            <p class="qst_tit"><span class="step">Step 2.</span>업종을 선택해주세요</p> <!-- 180222_수정 [텍스트 현향화] -->
+                            <ul id="lists_2" class="option_slt float">
+
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_1" name="option_cate2" data-rename="서비스업" value="R113" checked="">
+                                            <label for="option_cate2_1">서비스업</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_2" name="option_cate2" data-rename="교육" value="R114">
+                                            <label for="option_cate2_2">교육</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_3" name="option_cate2" data-rename="의원/약국" value="R115">
+                                            <label for="option_cate2_3">의원/약국</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_4" name="option_cate2" data-rename="오피스" value="R116">
+                                            <label for="option_cate2_4">오피스</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_5" name="option_cate2" data-rename="요식업" value="R117">
+                                            <label for="option_cate2_5">요식업</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_6" name="option_cate2" data-rename="숙박 " value="R118">
+                                            <label for="option_cate2_6">숙박 </label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="rad_wrap2">
+                                            <input type="radio" id="option_cate2_7" name="option_cate2" data-rename="도/소매" value="R119">
+                                            <label for="option_cate2_7">도/소매</label>
+                                        </span>
+                                    </li>
+                                
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="lists">
+                            <p class="qst_tit"><span class="step">Step 3.</span>상품 가입 시 고려사항을 선택해주세요<span class="s_txt">(다중 선택 가능)</span></p> <!-- 180222_수정 [텍스트 현향화] -->
+                            <ul id="lists_3" class="option_slt">
+
+                                
+                                    <li>
+                                        <span class="chk_wrap2">
+                                            <input type="checkbox" id="option_cate3_1" name="option_cate3" data-rename="통신서비스" value="R162" checked="">
+                                            <label for="option_cate3_1">통신서비스</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="chk_wrap2">
+                                            <input type="checkbox" id="option_cate3_2" name="option_cate3" data-rename="보안" value="R163">
+                                            <label for="option_cate3_2">보안</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="chk_wrap2">
+                                            <input type="checkbox" id="option_cate3_3" name="option_cate3" data-rename="홍보" value="R164">
+                                            <label for="option_cate3_3">홍보</label>
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="chk_wrap2">
+                                            <input type="checkbox" id="option_cate3_4" name="option_cate3" data-rename="스마트 서비스업" value="R165">
+                                            <label for="option_cate3_4">스마트 서비스업</label>
+                                        </span>
+                                    </li>
+                                
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                        <button type="button" class="btn submit h60 ui_fitSubmit">결과 확인하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
