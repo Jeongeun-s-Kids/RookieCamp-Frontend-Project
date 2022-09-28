@@ -28,56 +28,68 @@
         #containers {
             font-family: "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif !important;
             margin: 0;
-            padding: 0;
-            margin-top: 20px;
-            margin-left: 180px;
+            padding: 60px 0 0px;
+            text-align: center;
         }
-
+        .gnb .depth2{
+            padding-left: 210px;
+            padding-top: 57px;
+        }
         .btnbtn {
             margin-top: 550px !important;
-            margin-right: 200px !important;
+            text-align: center;
         }
-
         .btn22{
             margin-right: 200px !important;
         }
         .mb-2 {
             margin-bottom: 54px !important;
         }
+        .bg-b{
+            background: #cfe2fa;
+            font-weight: bold;
+        }
+        .step{
+            color:#4272D9;
+            font-weight: bold !important;
+        }
+        .sec1{
+            background-color:  #f2f7fd !important;
+        }
     </style>
 </head>
 
 <body>
+    <div id="kt-head" class="kt-head">
+    </div>
+    
     <!-- survey page start-->
     <div id="containers" aria-hidden="false">
         <!-- Page Content-->
-        <div id="content" class="customer_center">
-            <div class="top_info">
-                <h2 class="tit00">맞춤형 서비스 추천</h2>
+        <div id="content" class="customer_center sec1">
+            <div class="top_info" style="padding-top: 0px;">
+                <div class="tit">
+                    <h2 class="tit00_1">맞춤형</h2><h2 class="tit00">서비스 추천</h2>
+                </div>
             </div>
             <div class="conts_box first">
                 <h3 class="tit01"><br></h3>
             </div>
-            <div class="conts_box case last ui_fitprod">
+            <div class="conts_box">
                 <div class="option_select_wrap">
                     <!-- 사업규모 -->
                     <div class="lists">
-                        <p class="qst_tit">
-                            <span class="step">Step 1.</span>
-                            사업 규모
-                        </p>
+                        <p class="qst_tit"><span class="step">Step 1.</span><span class="bg-b">사업 규모</span></p>
                         <ul id="lists_1" class="option_slt">
                             <li>
                                 <span class="red_wrap2">
-                                    <input type="radio" id="option_cate1_1" name="optioin_cate1" data-rename="대기업"
-                                        value="R101">
+                                    <input type="radio" id="option_cate1_1" name="optioin_cate1" data-rename="대기업" value="R101">
                                     <label for="option_cate1_1">대기업</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="red_wrap2">
-                                    <input type="radio" id="option_cate1_2" name="optioin_cate1" data-rename="중소기업"
-                                        value="R102">
+                                    <input type="radio" id="option_cate1_2" name="optioin_cate1" data-rename="중소기업" value="R102">
                                     <label for="option_cate1_2">중소기업</label>
                                 </span>
                             </li>
@@ -92,10 +104,7 @@
                     </div>
                     <!-- step1 -->
                     <div class="lists">
-                        <p class="qst_tit">
-                            <span class="step">Step 2.</span>
-                            업종 선택
-                        </p>
+                        <p class="qst_tit"><span class="step">Step 2.</span><span class="bg-b">업종 선택</span></p>
                         <ul id="lists_2" class="option_slt float">
                             <li>
                                 <span class="red_wrap2">
@@ -138,7 +147,7 @@
                     <div class="lists">
                         <p class="qst_tit mb-2">
                             <span class="step">Step 3.</span>
-                            관심 분야 선택
+                            <span class="bg-b">관심 분야 선택</span>
                             <span class="s_txt">(다중 선택 가능)</span>
                         </p>
                         <ul id="lists_3" class="option_slt">
@@ -182,7 +191,7 @@
                 </div>
             </div>
             <!-- 결과보기 -->
-            <div class="btnbtn btn_wrap">
+            <div class="btnbtn">    
                 <button type="button" class="btn submit h60 ui_fitSubmit">결과 확인</button>
             </div>
             <br><br><br>
@@ -192,7 +201,7 @@
     <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <!-- reco page start-->
-            <div class="gray_cont_box ui_fitProd_cont" style="padding-left: 200px;">
+            <div class="ui_fitProd_cont" style="padding-left: 200px;">
                 <div class="conts_box">
                     <div class="decs_tit">
                         <h3 class="tit01">맞춤 추천 서비스 <em class="em ui_pdcart_item_cnt">6</em></h3>
