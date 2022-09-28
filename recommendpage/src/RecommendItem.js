@@ -16,12 +16,6 @@ class RecommendItem extends Component{
         this.setState({
             isHovering:!this.state.isHovering
         });
-        
-        if(this.state.isHovering){
-            
-        }else if(!this.state.isHovering){
-
-        }
     }
 
     render(){
