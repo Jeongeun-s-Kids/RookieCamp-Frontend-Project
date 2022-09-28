@@ -39,9 +39,6 @@
             margin-top: 550px !important;
             text-align: center;
         }
-        .btn22{
-            margin-right: 200px !important;
-        }
         .mb-2 {
             margin-bottom: 54px !important;
         }
@@ -56,6 +53,9 @@
         .sec1{
             background-color:  #f2f7fd !important;
         }
+        .btn:hover{
+            border-color : #92b5f1 !important;
+        }
     </style>
 </head>
 
@@ -67,9 +67,9 @@
     <div id="containers" aria-hidden="false">
         <!-- Page Content-->
         <div id="content" class="customer_center sec1">
-            <div class="top_info" style="padding-top: 0px;">
+            <div class="top_info" style="padding-top: 50px;">
                 <div class="tit">
-                    <h2 class="tit00_1">맞춤형</h2><h2 class="tit00">서비스 추천</h2>
+                    <h2 class="tit00">나를 위한&nbsp;</h2><h2 class="tit00_1">맞춤형&nbsp;서비스</h2><h2 class="tit00">가 무엇일까요?</h2>
                 </div>
             </div>
             <div class="conts_box first">
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <!-- 결과보기 -->
-            <div class="btnbtn">    
+            <div class="btnbtn"> 
                 <button type="button" class="btn submit h60 ui_fitSubmit">결과 확인</button>
             </div>
             <br><br><br>
@@ -201,68 +201,114 @@
     <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <!-- reco page start-->
-            <div class="ui_fitProd_cont" style="padding-left: 200px;">
-                <div class="conts_box">
-                    <div class="decs_tit">
-                        <h3 class="tit01">맞춤 추천 서비스 <em class="em ui_pdcart_item_cnt">6</em></h3>
-                        <p class="t01_decs">조건을 선택하시면 기업 맞춤 서비스를 추천해 드립니다.</p>
-                    </div>
-                    <div class="recommend_prod_list ui_recommend_prod_list banner_wrap">
-                        <div class="lists">
-                            <dl class="prod_info">
-                                <dt><i class="ico ico_gy bz type26"></i><span>AI 방역로봇</span></dt>
-                                <dd>일생을 감염의 위험과 함께하는 엔데믹의 시대에
-                                    일상의 안전을 지키는 AI 로봇 기반의 새로운 방역 패러다임</dd>
-                            </dl>
-                            <span class="chk_wrap">
-                                <input type="checkbox" name="ipt_chk" id="ipt_chk1" value="B201" data-prod-id="B201"
-                                    data-prod-title="Biz인터넷">
-                                <label for="ipt_chk1"
-                                    onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_005.do';">
-                                    <span class="hide">Biz인터넷 상품 선택</span>
-                                </label>
-                            </span>
-                        </div>
-                        <div class="lists">
-                            <dl class="prod_info">
-                                <dt><i class="ico ico_gy bz type39"></i><span>AI 서비스 로봇</span></dt>
-                                <dd>바쁜 일터를 돕고, 매장의 경쟁력을 높여주는 로봇 솔루션</dd>
-                            </dl>
-                            <span class="chk_wrap">
-                                <input type="checkbox" name="ipt_chk" id="ipt_chk2" value="B214" data-prod-id="B214"
-                                    data-prod-title="B tv">
-                                <label for="ipt_chk2"
-                                    onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_004.do';">
-                                    <span class="hide">B tv 상품 선택</span>
-                                </label>
-                            </span>
-                        </div>
-                        <div class="lists">
-                            <dl class="prod_info">
-                                <dt><i class="ico ico_gy bz type01"></i><span>AI 뉴바리스타 로봇</span></dt>
-                                <dd>KT AI와 Robotics 기술이 만나 완전 무인카페 서비스를
-                                    제공하는 뉴바리스타 로봇</dd>
-                            </dl>
-                            <span class="chk_wrap">
-                                <input type="checkbox" name="ipt_chk" id="ipt_chk3" value="B101" data-prod-id="B101"
-                                    data-prod-title="기업인터넷전화">
-                                <label for="ipt_chk3"
-                                    onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                                    <span class="hide">기업인터넷전화 상품 선택</span>
-                                </label>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="recommend_prod_btn_wrap replay">
-                        <button type="button" class="recommend_prod_btn ui_prod_reset_btn btn22">다시하기</button>
-                    </div>
+    <div class="ui_fitProd_cont">
+        <div class="conts_box">
+            <div class="decs_tit" style="padding-top: 50px;">
+                <div class="tit">
+                    <h2 class="tit00_1">맞춤형 서비스</h2><h2 class="tit00">를 <span class="bg-b">살펴보세요!</span> <em class="em ui_pdcart_item_cnt">6</em></h2>
                 </div>
             </div>
-            <!-- reco page end -->
-            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <div class="recommend_prod_list ui_recommend_prod_list banner_wrap">
+                <div class="lists">
+                    <dl class="prod_info">
+                        <dt><i class="ico ico_gy bz type26"></i><span>AI 방역로봇</span></dt>
+                        <dd>일생을 감염의 위험과 함께하는 엔데믹의 시대에
+                            일상의 안전을 지키는 AI 로봇 기반의 새로운 방역 패러다임</dd>
+                    </dl>
+                    <span class="chk_wrap">
+                        <input type="checkbox" name="ipt_chk" id="ipt_chk1" value="B201" data-prod-id="B201"
+                            data-prod-title="Biz인터넷">
+                        <label for="ipt_chk1"
+                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_005.do';">
+                            <span class="hide">Biz인터넷 상품 선택</span>
+                        </label>
+                    </span>
+                </div>
+                <div class="lists">
+                    <dl class="prod_info">
+                        <dt><i class="ico ico_gy bz type39"></i><span>AI 서비스 로봇</span></dt>
+                        <dd>바쁜 일터를 돕고, 매장의 경쟁력을 높여주는 로봇 솔루션</dd>
+                    </dl>
+                    <span class="chk_wrap">
+                        <input type="checkbox" name="ipt_chk" id="ipt_chk2" value="B214" data-prod-id="B214"
+                            data-prod-title="B tv">
+                        <label for="ipt_chk2"
+                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_004.do';">
+                            <span class="hide">B tv 상품 선택</span>
+                        </label>
+                    </span>
+                </div>
+                <div class="lists">
+                    <dl class="prod_info">
+                        <dt><i class="ico ico_gy bz type01"></i><span>AI 뉴바리스타 로봇</span></dt>
+                        <dd>KT AI와 Robotics 기술이 만나 완전 무인카페 서비스를
+                            제공하는 뉴바리스타 로봇</dd>
+                    </dl>
+                    <span class="chk_wrap">
+                        <input type="checkbox" name="ipt_chk" id="ipt_chk3" value="B101" data-prod-id="B101"
+                            data-prod-title="기업인터넷전화">
+                        <label for="ipt_chk3"
+                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
+                            <span class="hide">기업인터넷전화 상품 선택</span>
+                        </label>
+                    </span>
+                </div>
+                <div class="lists">
+                    <dl class="prod_info">
+                        <dt><i class="ico ico_gy bz type01"></i><span>AI 뉴바리스타 로봇</span></dt>
+                        <dd>KT AI와 Robotics 기술이 만나 완전 무인카페 서비스를
+                            제공하는 뉴바리스타 로봇</dd>
+                    </dl>
+                    <span class="chk_wrap">
+                        <input type="checkbox" name="ipt_chk" id="ipt_chk3" value="B101" data-prod-id="B101"
+                            data-prod-title="기업인터넷전화">
+                        <label for="ipt_chk3"
+                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
+                            <span class="hide">기업인터넷전화 상품 선택</span>
+                        </label>
+                    </span>
+                </div>
+                <div class="lists">
+                    <dl class="prod_info">
+                        <dt><i class="ico ico_gy bz type01"></i><span>AI 뉴바리스타 로봇</span></dt>
+                        <dd>KT AI와 Robotics 기술이 만나 완전 무인카페 서비스를
+                            제공하는 뉴바리스타 로봇</dd>
+                    </dl>
+                    <span class="chk_wrap">
+                        <input type="checkbox" name="ipt_chk" id="ipt_chk3" value="B101" data-prod-id="B101"
+                            data-prod-title="기업인터넷전화">
+                        <label for="ipt_chk3"
+                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
+                            <span class="hide">기업인터넷전화 상품 선택</span>
+                        </label>
+                    </span>
+                </div>
+                <div class="lists">
+                    <dl class="prod_info">
+                        <dt><i class="ico ico_gy bz type01"></i><span>AI 뉴바리스타 로봇</span></dt>
+                        <dd>KT AI와 Robotics 기술이 만나 완전 무인카페 서비스를
+                            제공하는 뉴바리스타 로봇</dd>
+                    </dl>
+                    <span class="chk_wrap">
+                        <input type="checkbox" name="ipt_chk" id="ipt_chk3" value="B101" data-prod-id="B101"
+                            data-prod-title="기업인터넷전화">
+                        <label for="ipt_chk3"
+                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
+                            <span class="hide">기업인터넷전화 상품 선택</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+            <div class="recommend_prod_btn_wrap replay">
+                <button type="button" class="recommend_prod_btn ui_prod_reset_btn">다시하기</button>
+            </div>
+        </div>
+    </div>
+    <!-- reco page end -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-    
+
 
     <!-- review page start-->
     <div class="popup">

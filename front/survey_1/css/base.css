@@ -373,9 +373,10 @@ strong,.bold {font-weight:500;}
 .tit{text-align: center;}
 .tit .tit00{display:inline-block;} 
 .tit .tit00_1{display:inline-block;} 
+.tit .tit01{display:inline-block;} 
 .tit00 {font-size:40px; line-height:54px; color:#222; font-family:'tgothic'; font-weight: bold; text-align: center;}/*bx*/
 .tit00_1 {font-size:40px; line-height:54px; color:#4272D9; font-family:'tgothic'; font-weight: bold; text-align: center;}/*bx*/
-.tit01 {font-size:30px; line-height:45px; word-break:keep-all; color:#222; font-family:'tgothic';}/*bx*/
+.tit01 {font-size:30px; line-height:45px; word-break:keep-all; color:#222; font-family:'tgothic'; font-weight: bold; text-align: center;}/*bx*/
 .tit02 {font-size:24px; line-height:36px; color:#222; font-family:'tgothic';}/*bx*/
 .tit02_l {font-size:26px; font-weight:500; line-height:39px; color:#222;}
 .tit03 {font-size:20px; line-height:30px; color:#222;}
@@ -1534,7 +1535,7 @@ strong,.bold {font-weight:500;}
 /* check products */
 .recommend_prod_btn_wrap {text-align:center;}
 .recommend_prod_btn_wrap.replay {margin-top:40px;}
-.recommend_prod_list {font-size:0;}
+.recommend_prod_list {font-size:0; text-align: center;}
 .recommend_prod_list .lists {display:inline-block; position:relative; box-sizing:border-box; width:370px; height:190px; margin:30px 0 0 30px; padding:27px 140px 27px 30px; vertical-align:top; border:1px solid #eeeceb; background:#fff;}
 .recommend_prod_list .lists:nth-child(3n+1) {margin-left:0;}
 .recommend_prod_list .lists dt {font-size:24px; line-height:30px; padding-left:28px;}
@@ -1544,7 +1545,7 @@ strong,.bold {font-weight:500;}
 .recommend_prod_list .lists .chk_wrap label {box-sizing:border-box; width:100%; height:100%; padding-left:0;}
 .recommend_prod_list .lists .chk_wrap :checked + label {border:2px solid #92B5F1;}/*bx*/
 .recommend_prod_list .lists .chk_wrap label:after {top:30px; left:30px;}
-.recommend_prod_btn {line-height:50px; width:200px; height:50px; color:#666; border:1px solid #dddbda; background:#fff; border-radius:20px 20px 0 20px;}/*bx*/
+.recommend_prod_btn {line-height:50px; width:200px; height:50px; color:#fff; border:1px solid #dddbda; background:#3069B3; border-radius:15px;}/*bx*/
 .list_wrap .banner_business a {min-height:296px;}
 .list_wrap .banner_business dl dt {min-height:68px;}
 .list_wrap .banner_business dl dd {min-height:46px;}
