@@ -62,7 +62,6 @@
         }
 
     </style>
-
     <script>
         $(document).ready(function(){
             $('#resultBtn').click(function(){
@@ -74,6 +73,10 @@
                 });
             })
         })
+        function fnMove(seq){
+            var offset = $("#recommend_"+ seq).offset();
+            $('html, body').animate({scrollTop : offset.top}, 400);
+        }
     </script>
 </head>
 
@@ -209,7 +212,12 @@
             </div>
             <!-- 결과보기 -->
             <div class="btnbtn"> 
+<<<<<<< HEAD
                 <button id="resultBtn" type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result">결과 확인</button>
+=======
+                <button type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
+                onclick="fnMove('result')">결과 확인</button>
+>>>>>>> 73b61e794cc803a6ba74ec71a425fee40de32ca8
             </div>
             <br><br><br>
         </div>
@@ -227,7 +235,7 @@
             </div>
             <div class="recommend_prod_list ui_recommend_prod_list banner_wrap">
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_005.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/ai/airCleanerAI.png' style="width: 70px; height:70px;" alt=""/>
                             <span>AI 방역로봇</span>
@@ -235,175 +243,118 @@
                         <dd class="description">일생을 감염의 위험과 함께하는 엔데믹의 시대에
                             일상의 안전을 지키는 AI 로봇 기반의 새로운 방역 패러다임</dd>
                     </dl>
+<<<<<<< HEAD
                     <!-- <span class="chk_wrap">
                         <label for="ipt_chk1"
                             onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_005.do';">
                         </label>
                     </span> -->
+=======
+>>>>>>> 73b61e794cc803a6ba74ec71a425fee40de32ca8
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_004.do';">
                         <dt class="description"><img class="ico" src='./res/icons/ai/servingAI.png' style="width: 70px; height:70px;" alt=""/>
                             <span>AI 서비스 로봇</span></dt>
                         <dd class="description">바쁜 일터를 돕고, 매장의 경쟁력을 높여주는 로봇 솔루션</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk2"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_004.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/ai/baristaAI.png' style="width: 70px; height:70px;" alt=""/>
                             <span>AI 뉴바리스타 로봇</span></dt>
                         <dd class="description">KT AI와 Robotics 기술이 만나 완전 무인카페 서비스를
                             제공하는 뉴바리스타 로봇</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/ringobiz.png' style="width: 70px; height:70px;" alt=""/>
                             <span>링고비즈</span></dt>
                         <dd class="description">365일 내 매장을 저렴하게 홍보하는 특별한 통화연결음 (전화안내멘트)</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/barsinJungbo.png' style="width: 70px; height:70px;" alt=""/>
                             <span>발신정보알리미</span></dt>
                         <dd class="description">우리 회사/매장의 상호명을 표시해주는 서비스</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/gpsmessage.png' style="width: 70px; height:70px;" alt=""/>
                             <span>위치문자</span></dt>
                         <dd class="description">"고객 위치"기반의 타겟 마케팅
                             서비스를 제공합니다.</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
 
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/store_info_message.png' style="width: 70px; height:70px;" alt=""/>
                             <span>가게정보알림메세지(소상공인형)</span></dt>
                         <dd class="description">걸려온 전화가 끝나면 알아서
                             홍보문자를 보내주는 우리가게 도우미</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/callcheckin.png' style="width: 70px; height:70px;" alt=""/>
                             <span>콜체크인</span></dt>
                         <dd class="description">전화 한 통으로 간편하게 출입등록을 할 수 있는
                             코로나 방역 특화 서비스</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/safenumber.png' style="width: 70px; height:70px;" alt=""/>
                             <span>안심번호 0502</span></dt>
                         <dd class="description">이용자의 개인정보를 지켜주는 가상번호 서비스</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
 
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/com/daponumber.png' style="width: 70px; height:70px;" alt=""/>
                             <span>전국대표번호</span></dt>
                         <dd class="description">전국 대리점 번호가 하나의 대표번호로 통합되는 서비스</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/marketing/sanggunbunsuck_solution.png' style="width: 70px; height:70px;" alt=""/>
                             <span>상권분석솔루션(GrlP)</span></dt>
                         <dd class="description">전국의 모든 상업용 건물 및 사업체 정보를 기반으로 매장 매출 분석 및
                             출점 후보지 분석을 지원하는 상권분석 솔루션</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/marketing/target_marketing.png' style="width: 70px; height:70px;" alt=""/>
                             <span>타겟마케팅(K-Ads)</span></dt>
                         <dd class="description">KT의 Digico 기술로 고객의 관심사, 라이프 스타일등 이용패턴을 분석하여,
                             광고주가 원하는 최적의 고객군에게 서비스 내용을 제공하는 차별화된 타겟 마케팅 서비스</dd>
                     </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
                 </div>
                 <div class="lists">
-                    <dl class="prod_info">
+                    <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/marketing/jalnagagae.png' style="width: 70px; height:70px;" alt=""/>
                             <span>잘나가게</span></dt>
                         <dd class="description">빅데이터를 활용해 유용한 상권 정보와 이에 따른 영업 TIP을
                             보내주는 예비창업자/소상공인 대상 문자 알림 서비스</dd>
-                    </dl>
-                    <span class="chk_wrap">
-                        <label for="ipt_chk3"
-                            onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_002.do';">
-                        </label>
-                    </span>
+                    </dl>   
                 </div>
             </div>
             <div class="recommend_prod_btn_wrap replay">

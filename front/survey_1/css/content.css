@@ -109,7 +109,7 @@
 .option_select_wrap .qst_tit {font-size:24px; line-height:36px; height:70px;}
 .option_select_wrap .qst_tit span.step {display:block; font-weight:500;}
 .option_select_wrap .qst_tit span.s_txt {display:inline-block; font-size:14px; line-height:21px;  color:#898786;}
-.option_select_wrap .option_slt {margin-top:30px;}
+.option_select_wrap .option_slt {margin-top:30px; text-align: center;}
 .option_select_wrap .option_slt li {margin-top:17px;}
 .option_select_wrap .lists .option_slt.float {overflow:hidden; margin:13px 0 0 -20px;}
 .option_select_wrap .lists .option_slt.float1 {margin:13px 0 0 -20px;}
@@ -124,7 +124,6 @@
 .gray_cont_box {padding:60px 0; background:#f2f0f0;}
 #contents .gray_cont_box .conts_box {margin:0 auto;}
 
-#4172d9
 /*°¡ÀÔÀü¹® »ó´ã*/
 .gray_box {padding:30px; border:1px solid #dddbda; background:#f8f6f5;}
 .gray_box.pd2 {padding:20px 30px;}
