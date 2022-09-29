@@ -62,6 +62,13 @@
         }
         /* dd .description:hover{ color:#fff !important;} */
     </style>
+    <script>
+        function fnMove(seq){
+            var offset = $("#recommend_"+ seq).offset();
+            $('html, body').animate({scrollTop : offset.top}, 400);
+        }
+    </script>
+        
 </head>
 
 <body>
@@ -196,7 +203,8 @@
             </div>
             <!-- 결과보기 -->
             <div class="btnbtn"> 
-                <button type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result">결과 확인</button>
+                <button type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
+                onclick="fnMove('result')">결과 확인</button>
             </div>
             <br><br><br>
         </div>
