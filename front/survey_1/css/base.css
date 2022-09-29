@@ -183,6 +183,7 @@ input[type='text']:focus,input[type='password']:focus,input[type='search']:focus
 .rad_wrap,.chk_wrap {display:inline-block; position:relative; vertical-align:top;}
 .rad_wrap input[type='radio'],.chk_wrap input[type='checkbox'] {position:absolute; top:2px; left:0; overflow:hidden; width:18px; height:18px; opacity:0; outline:0;}
 .rad_wrap label,.chk_wrap label {display:inline-block; position:relative; font-size:15px; line-height:23px; padding-left:24px; cursor:pointer; vertical-align:top; color:#666;}
+.rad_wrap label,.chk_wrap label:hover {display:inline-block; position:relative; font-size:15px; line-height:23px; padding-left:24px; cursor:pointer; vertical-align:top; color:#fff;}
 .rad_wrap label:after,.chk_wrap label:after {content:''; display:block; position:absolute; top:2px; left:0; overflow:hidden; width:18px; height:18px; background:url('/common/img/vin/common/form.png') no-repeat left top;}
 .rad_wrap label:after {background-position:0 0;}
 .rad_wrap input[type='radio']:checked + label:after {background-position:-100px 0;}
@@ -1536,15 +1537,17 @@ strong,.bold {font-weight:500;}
 .recommend_prod_btn_wrap {text-align:center;}
 .recommend_prod_btn_wrap.replay {margin-top:40px;}
 .recommend_prod_list {font-size:0; text-align: center;}
-.recommend_prod_list .lists {display:inline-block; position:relative; box-sizing:border-box; width:370px; height:190px; margin:30px 0 0 30px; padding:20px 140px 27px 30px; vertical-align:top; border:1px solid #92b5f1; background:#fff; border-radius: 10px;}
+.recommend_prod_list .lists {display:inline-block; position:relative; box-sizing:border-box; width:370px; height:190px; margin:30px 0 0 30px; padding:20px 140px 27px 30px; vertical-align:top; border:1px solid #3069B3; border-radius: 15px; background:#fff;}
+.recommend_prod_list .lists:hover{ background-color: #3069B3; color:#fff !important;}
 .recommend_prod_list .lists:nth-child(3n+1) {margin-left:0;}
 .recommend_prod_list .lists dt {font-size:24px; line-height:30px;}
 .recommend_prod_list .lists dt .ico {position:absolute; top:50%; right:30px; margin-top:-50px;}
 .recommend_prod_list .lists dd {font-size:15px; margin-top:10px; color:#666;}
-.recommend_prod_list .lists .chk_wrap {position:absolute; top:0; left:0; width:100%; height:100%;}
-.recommend_prod_list .lists .chk_wrap label {box-sizing:border-box; width:100%; height:100%; padding-left:0;}
-.recommend_prod_list .lists .chk_wrap :checked + label {border:2px solid #92B5F1;}/*bx*/
-.recommend_prod_list .lists .chk_wrap label:after {top:30px; left:30px;}
+.recommend_prod_list .lists dd:hover{ background-color: #3069B3; color:#fff !important;}
+.recommend_prod_list .lists .chk_wrap {position:absolute; top:0; left:0; width:100%; height:100%; text-decoration: none;}
+.recommend_prod_list .lists .chk_wrap label {box-sizing:border-box; width:100%; height:100%; padding-left:0; text-decoration: none;}
+.recommend_prod_list .lists .chk_wrap :checked + label {border:2px solid #3069B3; color:#fff; text-decoration: none;}/*bx*/
+.recommend_prod_list .lists .chk_wrap label:after {top:30px; left:30px; text-decoration: none;}
 .recommend_prod_btn {line-height:50px; width:200px; height:50px; color:#fff; border:1px solid #dddbda; background:#3069B3; border-radius:15px;}/*bx*/
 .list_wrap .banner_business a {min-height:296px;}
 .list_wrap .banner_business dl dt {min-height:68px;}
