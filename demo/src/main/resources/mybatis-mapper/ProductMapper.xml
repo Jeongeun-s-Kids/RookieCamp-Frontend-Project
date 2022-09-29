@@ -4,12 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.model.dao.ProductDAO">
 	<insert id="insert" parameterType="com.example.demo.model.vo.ProductVO">
-		insert into product(name, type, category, link)
-		values(#{name}, #{type}, #{category}, #{link})
+		insert into product(name, type, category, link,icon,content)
+		values(#{name}, #{type}, #{category}, #{link},#{icon}, #{content})
 	</insert>
 	
 	<update id="update" parameterType="com.example.demo.model.vo.ProductVO">
-		update product set name=#{name}, type=#{type}, category=#{category} where seq=#{seq}
+		update product set name=#{name}, type=#{type}, category=#{category}, where seq=#{seq}
 	</update>
 	
 	<delete id="delete" parameterType="com.example.demo.model.vo.ProductVO">
@@ -28,11 +28,11 @@
 		select * from product where type in (#{category}) and category in(#{product1})
 	</select>
 
-	<select id="selectTwo" parameterType="com.example.demo.model.vo.SearchVO" resultType="com.example.demo.model.vo.ProductVO">
+	<select id="selectTwo" parameterType="com.example.demo.model.vo.SearchVO2" resultType="com.example.demo.model.vo.ProductVO">
 		select * from product where type in (#{category}) and category in(#{product1},#{product2})
 	</select>
 
-	<select id="selectThree" parameterType="com.example.demo.model.vo.SearchVO" resultType="com.example.demo.model.vo.ProductVO">
+	<select id="selectThree" parameterType="com.example.demo.model.vo.SearchVO3" resultType="com.example.demo.model.vo.ProductVO">
 		select * from product where type in (#{category}) and category in(#{product1},#{product2},#{product3})
 	</select>
 </mapper>
