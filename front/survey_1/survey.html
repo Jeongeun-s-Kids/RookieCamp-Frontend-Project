@@ -60,8 +60,21 @@
         .description{
             text-align: left;
         }
-        /* dd .description:hover{ color:#fff !important;} */
+
     </style>
+
+    <script>
+        $(document).ready(function(){
+            $('#resultBtn').click(function(){
+                console.log('clicked');
+                var names = [];
+                $('#lists_3 input:checked').each(function(){
+                    names.push(this.value);
+                    console.log(names);
+                });
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -158,35 +171,35 @@
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_1" name="optioin_cate3" data-rename="통신"
-                                        value="R162">
+                                        value="communication">
                                     <label for="option_cate3_1">통신</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_2" name="optioin_cate3"
-                                        data-rename="스마트 서비스" value="R163">
+                                        data-rename="스마트 서비스" value="smart">
                                     <label for="option_cate3_2">스마트 서비스</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_3" name="optioin_cate3" data-rename="미디어/광고"
-                                        value="R164">
+                                        value="media">
                                     <label for="option_cate3_3">미디어/광고</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_4" name="optioin_cate3" data-rename="보안"
-                                        value="R165">
+                                        value="security">
                                     <label for="option_cate3_4">보안</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_5" name="optioin_cate3" data-rename="마케팅"
-                                        value="R166">
+                                        value="marketing">
                                     <label for="option_cate3_5">마케팅</label>
                                 </span>
                             </li>
@@ -196,7 +209,7 @@
             </div>
             <!-- 결과보기 -->
             <div class="btnbtn"> 
-                <button type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result">결과 확인</button>
+                <button id="resultBtn" type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result">결과 확인</button>
             </div>
             <br><br><br>
         </div>
@@ -222,11 +235,11 @@
                         <dd class="description">일생을 감염의 위험과 함께하는 엔데믹의 시대에
                             일상의 안전을 지키는 AI 로봇 기반의 새로운 방역 패러다임</dd>
                     </dl>
-                    <span class="chk_wrap">
+                    <!-- <span class="chk_wrap">
                         <label for="ipt_chk1"
                             onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_005.do';">
                         </label>
-                    </span>
+                    </span> -->
                 </div>
                 <div class="lists">
                     <dl class="prod_info">
