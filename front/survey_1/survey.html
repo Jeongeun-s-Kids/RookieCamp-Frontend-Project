@@ -63,6 +63,9 @@
 
     </style>
     <script>
+
+        let test = {}
+
         $(document).ready(function(){
             $('#resultBtn').click(function(){
                 console.log('clicked');
@@ -102,17 +105,31 @@
                     url:query_url,
                     data: JSON.stringify(params),
                     success:function(res){
-                        alert(res);
-                        console.log(res);
+                        $('#card_list').empty();
+                        res.forEach(result => {
+                            let str = '<div class="lists">'
+                            str +='<dl class="prod_info" onclick="location.href=' + "'" + result.link + "'" + ';">' 
+                                    + '<dt class="description">' 
+                                    + '<img class="ico" src=' + "'" + './res/icons/'+ result.category + '/' + result.icon + "'" + 'style="width: 70px; height:70px;" alt=""/>'
+                                    + '<span>'+ result.name + '</span>' + '</dt>'
+                                    + '<dd class="description">' + result.content + '</dd>'
+                                    + '</dl></div>';
+
+                            $("#card_list").append(str);
+                        });
+
+
+
                     },
                     error:function(XMLHttpRequest, textStatus, errorThrown){
                         alert('통신 실패.');
                         console.log('통신 실패.');
                     }
                 });
-            })
-        })
+            });
+        });
         function fnMove(seq){
+            console.log('move');
             var offset = $("#recommend_"+ seq).offset();
             $('html, body').animate({scrollTop : offset.top}, 400);
         }
@@ -253,7 +270,7 @@
             <div class="btnbtn"> 
 
                 <button id="resultBtn" type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
-                onclick="fnMove('result')">결과 확인</button>
+                    onclick="fnMove('result')">결과 확인</button>
             </div>
             <br><br><br>
         </div>
@@ -269,8 +286,8 @@
                     <h2 class="tit00_1">맞춤형 서비스</h2><h2 class="tit00">를 <span class="bg-b">살펴보세요!</span> <em class="em ui_pdcart_item_cnt">6</em></h2>
                 </div>
             </div>
-            <div class="recommend_prod_list ui_recommend_prod_list banner_wrap">
-                <div class="lists">
+            <div id='card_list' class="recommend_prod_list ui_recommend_prod_list banner_wrap">
+                <!-- <div class="lists">
                     <dl class="prod_info" onclick="location.href='https:/enterprise.kt.com/pd/P_PD_AI_RB_005.do';">
                         <dt class="description">
                             <img class="ico" src='./res/icons/ai/airCleanerAI.png' style="width: 70px; height:70px;" alt=""/>
@@ -383,7 +400,7 @@
                         <dd class="description">빅데이터를 활용해 유용한 상권 정보와 이에 따른 영업 TIP을
                             보내주는 예비창업자/소상공인 대상 문자 알림 서비스</dd>
                     </dl>   
-                </div>
+                </div> -->
             </div>
             <div class="recommend_prod_btn_wrap replay">
                 <button type="button" class="recommend_prod_btn ui_prod_reset_btn">다시하기</button>
@@ -429,81 +446,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script>
-        console.log('script works!');
-
-
-        // var cat1 = $("input:radio[id=optioin_cate1_1]");
-        var cat1_1 = $("#option_cate1_1");
-        cat1_1.click(function(){
-            console.log('대기업 클릭');
-            console.log(cat1_1.attr('data-rename'));
-        });
-        var cat1_2 = $("#option_cate1_2");
-        cat1_2.click(function(){
-            console.log('중소기업 클릭');
-        });
-        var cat1_3 = $("#option_cate1_3");
-        cat1_3.click(function(){
-            console.log('자영업 클릭');
-        });
-
-        var cat2_1 = $("#option_cate2_1");
-        cat2_1.click(function(){
-            console.log('서비스업 클릭');
-        });
-        var cat2_2 = $("#option_cate2_2");
-        cat2_2.click(function(){
-            console.log('교육 클릭');
-        });
-        var cat2_3 = $("#option_cate2_3");
-        cat2_3.click(function(){
-            console.log('오피스 클릭');
-        });
-        var cat2_4 = $("#option_cate2_4");
-        cat2_4.click(function(){
-            console.log('요식업 클릭');
-        });
-        var cat2_5 = $("#option_cate2_5");
-        cat2_5.click(function(){
-            console.log('도/소매 클릭');
-        });
-        var cat3_1 = $("#option_cate3_1");
-        cat3_1.click(function(){
-            console.log('통신');
-        })
-        var cat3_2 = $("#option_cate3_2");
-        cat3_2.click(function(){
-            console.log('스마트 서비스');
-        })
-        var cat3_3 = $("#option_cate3_3");
-        cat3_3.click(function(){
-            console.log('미디어/광고');
-        })
-        var cat3_4 = $("#option_cate3_4");
-        cat3_4.click(function(){
-            console.log('보안');
-        })
-        var cat3_5 = $("#option_cate3_5");
-        cat3_5.click(function(){
-            console.log('마케팅');
-        })
-
-        // fnMove = function(){
-        //     console.log('검색 클릭');
-        // }
-        fnMove = function(){
-            console.log('검색클릭');
-            // 클릭 개수에따라 다른 api호출
-            
-        }
-            //1개
-
-            //2개
-
-            //3개
-
-    </script>
 </body>
 
 </html>
