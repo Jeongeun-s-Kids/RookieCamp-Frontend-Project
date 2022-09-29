@@ -60,15 +60,24 @@
         .description{
             text-align: left;
         }
-        /* dd .description:hover{ color:#fff !important;} */
+
     </style>
     <script>
+        $(document).ready(function(){
+            $('#resultBtn').click(function(){
+                console.log('clicked');
+                var names = [];
+                $('#lists_3 input:checked').each(function(){
+                    names.push(this.value);
+                    console.log(names);
+                });
+            })
+        })
         function fnMove(seq){
             var offset = $("#recommend_"+ seq).offset();
             $('html, body').animate({scrollTop : offset.top}, 400);
         }
     </script>
-        
 </head>
 
 <body>
@@ -94,8 +103,8 @@
                         <ul id="lists_1" class="option_slt">
                             <li>
                                 <span class="red_wrap2">
-                                    <input type="radio" id="option_cate1_1" name="optioin_cate1" data-rename="대기업" value="R101">
-                                    <label for="option_cate1_1">대기업</label>
+                                    <input type="radio" id="option_cate1_1" name="optioin_cate1" data-rename="자영업" value="R101" checked>
+                                    <label for="option_cate1_1">자영업</label>
                                 </span>
                             </li>
                             <li>
@@ -106,9 +115,9 @@
                             </li>
                             <li>
                                 <span class="red_wrap2">
-                                    <input type="radio" id="option_cate1_3" name="optioin_cate1" data-rename="자영업"
+                                    <input type="radio" id="option_cate1_3" name="optioin_cate1" data-rename="대기업"
                                         value="R103">
-                                    <label for="option_cate1_3">자영업</label>
+                                    <label for="option_cate1_3">대기업</label>
                                 </span>
                             </li>
                         </ul>
@@ -120,7 +129,7 @@
                             <li>
                                 <span class="red_wrap2">
                                     <input type="radio" id="option_cate2_1" name="optioin_cate2" data-rename="서비스업"
-                                        value="R113">
+                                        value="R113" checked>
                                     <label for="option_cate2_1">서비스업</label>
                                 </span>
                             </li>
@@ -165,35 +174,35 @@
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_1" name="optioin_cate3" data-rename="통신"
-                                        value="R162">
+                                        value="communication" checked>
                                     <label for="option_cate3_1">통신</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_2" name="optioin_cate3"
-                                        data-rename="스마트 서비스" value="R163">
+                                        data-rename="스마트 서비스" value="smart">
                                     <label for="option_cate3_2">스마트 서비스</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_3" name="optioin_cate3" data-rename="미디어/광고"
-                                        value="R164">
+                                        value="media">
                                     <label for="option_cate3_3">미디어/광고</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_4" name="optioin_cate3" data-rename="보안"
-                                        value="R165">
+                                        value="security">
                                     <label for="option_cate3_4">보안</label>
                                 </span>
                             </li>
                             <li>
                                 <span class="chk_wrap2">
                                     <input type="checkbox" id="option_cate3_5" name="optioin_cate3" data-rename="마케팅"
-                                        value="R166">
+                                        value="marketing">
                                     <label for="option_cate3_5">마케팅</label>
                                 </span>
                             </li>
@@ -203,7 +212,8 @@
             </div>
             <!-- 결과보기 -->
             <div class="btnbtn"> 
-                <button type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
+
+                <button id="resultBtn" type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
                 onclick="fnMove('result')">결과 확인</button>
             </div>
             <br><br><br>
