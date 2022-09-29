@@ -9,4 +9,6 @@ public class ProductVO {
     private String type;
     private String category;
     private String link;
+    private String icon;
+    private String content;
 }
