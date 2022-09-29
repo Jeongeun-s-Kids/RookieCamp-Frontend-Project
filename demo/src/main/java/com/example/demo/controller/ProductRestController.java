@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.service.ProductService;
 import com.example.demo.model.vo.ProductVO;
 import com.example.demo.model.vo.SearchVO;
+import com.example.demo.model.vo.SearchVO2;
+import com.example.demo.model.vo.SearchVO3;
 
 @RestController
 @RequestMapping("/product")
@@ -33,12 +35,12 @@ public class ProductRestController {
   }
 
   @PostMapping("/productTwo")
-  public List<ProductVO> getProductTwo(@RequestBody SearchVO vo){
+  public List<ProductVO> getProductTwo(@RequestBody SearchVO2 vo){
     return pService.getProductTwo(vo);
   }
 
   @PostMapping("/productThree")
-  public List<ProductVO> getProductThree(@RequestBody SearchVO vo){
+  public List<ProductVO> getProductThree(@RequestBody SearchVO3 vo){
     return pService.getProductThree(vo);
   }
 }

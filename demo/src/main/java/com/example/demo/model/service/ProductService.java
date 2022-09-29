@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.example.demo.model.vo.ProductVO;
 import com.example.demo.model.vo.SearchVO;
+import com.example.demo.model.vo.SearchVO2;
+import com.example.demo.model.vo.SearchVO3;
 
 public interface ProductService {
 
@@ -18,6 +20,6 @@ public interface ProductService {
     ProductVO getProduct(ProductVO vo);
 
     List<ProductVO> getProductOne(SearchVO vo);
-    List<ProductVO> getProductTwo(SearchVO vo);
-    List<ProductVO> getProductThree(SearchVO vo);
+    List<ProductVO> getProductTwo(SearchVO2 vo);
+    List<ProductVO> getProductThree(SearchVO3 vo);
 }
