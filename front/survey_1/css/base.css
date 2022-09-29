@@ -1538,12 +1538,12 @@ strong,.bold {font-weight:500;}
 .recommend_prod_btn_wrap.replay {margin-top:40px;}
 .recommend_prod_list {font-size:0; text-align: center;}
 .recommend_prod_list .lists {display:inline-block; position:relative; box-sizing:border-box; width:370px; height:190px; margin:30px 0 0 30px; padding:20px 140px 27px 30px; vertical-align:top; border:1px solid #3069B3; border-radius: 15px; background:#fff;}
-.recommend_prod_list .lists:hover{ background-color: #3069B3; color:#fff !important;}
+.recommend_prod_list .lists:hover *{ background-color: #3069B3; color:#fff !important;}
+.recommend_prod_list .lists:hover {background-color: #3069B3; color:#fff !important;}
 .recommend_prod_list .lists:nth-child(3n+1) {margin-left:0;}
 .recommend_prod_list .lists dt {font-size:24px; line-height:30px;}
 .recommend_prod_list .lists dt .ico {position:absolute; top:50%; right:30px; margin-top:-50px;}
 .recommend_prod_list .lists dd {font-size:15px; margin-top:10px; color:#666;}
-.recommend_prod_list .lists dd:hover{ background-color: #3069B3; color:#fff !important;}
 .recommend_prod_list .lists .chk_wrap {position:absolute; top:0; left:0; width:100%; height:100%; text-decoration: none;}
 .recommend_prod_list .lists .chk_wrap label {box-sizing:border-box; width:100%; height:100%; padding-left:0; text-decoration: none;}
 .recommend_prod_list .lists .chk_wrap :checked + label {border:2px solid #3069B3; color:#fff; text-decoration: none;}/*bx*/
