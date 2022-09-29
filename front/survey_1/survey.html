@@ -66,10 +66,56 @@
         $(document).ready(function(){
             $('#resultBtn').click(function(){
                 console.log('clicked');
-                var names = [];
+                var names = {};
+                var idx=1;
+                var total= 6 - idx;
+                var params={
+                    "cnt":idx,
+                    "category": "food",
+                    "product1": null,
+                    "product2": null,
+                    "product3": null,
+                    "product4": null,
+                    "product5": null,
+                    "product6": null
+                }
                 $('#lists_3 input:checked').each(function(){
-                    names.push(this.value);
-                    console.log(names);
+                    
+                    params['product'+(idx++)] = this.value;
+                    
+                });
+                idx--;
+                params['cnt'] = idx;
+                console.log(params);
+                var query_url = 'http://localhost:9999/product'
+                switch(idx){
+                    case 1:
+                        query_url += '/productOne';
+                        break;
+                    case 2:
+                        query_url += '/productTwo';
+                        break;
+                    case 3:
+                        query_url += '/productThree';
+                        break;
+                }
+            
+                $.ajax({
+                    headers: { 
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                    },
+                    type:'POST',
+                    url:query_url,
+                    data: JSON.stringify(params),
+                    success:function(res){
+                        alert(res);
+                        console.log(res);
+                    },
+                    error:function(XMLHttpRequest, textStatus, errorThrown){
+                        alert('통신 실패.');
+                        console.log('통신 실패.');
+                    }
                 });
             })
         })
@@ -456,34 +502,7 @@
         fnMove = function(){
             console.log('검색클릭');
             // 클릭 개수에따라 다른 api호출
-            var params={
-                "cnt":1,
-                "category": "food",
-                "product1": "communication",
-                "product2": null,
-                "product3": null,
-                "product4": null,
-                "product5": null,
-                "product6": null
-            }
-        
-            $.ajax({
-                headers: { 
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json' 
-                },
-                type:'POST',
-                url:'http://localhost:9999/product/productOne',
-                data: JSON.stringify(params),
-                success:function(res){
-                    alert(res.code);
-                    console.log(res.code);
-                },
-                error:function(XMLHttpRequest, textStatus, errorThrown){
-                    alert('통신 실패.');
-                    console.log('통신 실패.');
-                }
-            });
+            
         }
             //1개
 
