@@ -43,8 +43,8 @@ $(document).ready(function(){
                 $("#result_num").append(Object.keys(res).length);
                 $('#card_list').empty();
                 res.forEach(result => {
-                    let str = '<div class="lists">'
-                    str +='<dl class="prod_info" onclick="location.href=' + "'" + result.link + "'" + ';">' 
+                    let str = '<div class="lists new-cursor" onclick="location.href=' + "'" + result.link + "'" + ';">'
+                    str +='<dl class="prod_info" >' 
                             + '<dt class="description">' 
                             + '<img class="ico" src=' + "'" + './res/icons/'+ result.category + '/' + result.icon + "'" + 'style="width: 70px; height:70px;" alt=""/>'
                             + '<span>'+ result.name + '</span>' + '</dt>'
