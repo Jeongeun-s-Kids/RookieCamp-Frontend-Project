@@ -8,7 +8,6 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- import jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
   <!-- Bootstrap icons / font-awesome icons-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -112,53 +111,47 @@
         .btn2>a{color: #6199B7 !important;font-weight: bold;}
         .btn2:hover *{ background-color: #6199B7; color:#fff !important;font-weight: bold;}
         .btn2 .a:hover {background-color: #6199B7; color:#fff !important;font-weight: bold;}
-        .btn-close {float:right;}
+        .btn-close {float:right; margin-top: 20px;}
 
         img{width: 100px; height: 18px;}
     </style>
     </head>
     <body>
-        <i class="fa-solid fa-arrow-right"></i>
         <!-- The Modal -->
         <div class="modal center" id="onload" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-        
-                <!-- Modal Header -->
-                <div class="text-body" >
-                <!-- <h4 class="modal-title">Modal Title</h4> -->
+                <div class="modal-content">      
+                    <!-- Modal Header -->
+                    <div class="text-body" >
+                    <!-- <h4 class="modal-title">Modal Title</h4> -->
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <div id='dialog'>
+                        <label id="dlg-back" for="dialog_state"></label>
+                        <div id='dlg-wrap'>
+                        <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
+                        <div id='dlg-header'>
+                            <div class="dlg-h">
+                                <div class="dlg-bb">맞춤형 KT 서비스를</div>&nbsp;
+                                <div class="dlg-tb">쉽고 빠르게</div>&nbsp;
+                                <div class="dlg-tbold">찾아보시겠습니까?</div>
+                            </div>       
+                        </div>
+                        <div id='dlg-prompt'>
+                            <div class='button positive btn1' onclick="location.href='../survey_1/survey.html'">
+                                찾기&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class='button btn2'><a href="https://enterprise.kt.com/main.jsp" style="text-decoration: none;">
+                                <img src="./img/gnbLogo_p.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-        
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                <div id='dialog'>
-                <label id="dlg-back" for="dialog_state"></label>
-                <div id='dlg-wrap'>
-                    <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
-                    
-                    <div id='dlg-header'>
-                        <div class="dlg-h">
-                            <div class="dlg-bb">맞춤형 KT 서비스를</div>&nbsp;
-                            <div class="dlg-tb">쉽고 빠르게</div>&nbsp;
-                            <div class="dlg-tbold">찾아보시겠습니까?</div>
-                        </div>       
-                    </div>
-                    <div id='dlg-prompt'>
-                    <div class='button positive btn1' onclick="location.href='../survey_1/survey.html'">
-                        찾기&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class='button btn2'><a href="https://enterprise.kt.com/main.jsp" style="text-decoration: none;">
-                        <img src="./img/gnbLogo_p.png"></a>
-                    </div>
-                    </div>
-                </div>
-    </div>
-                </div>
-        
-
-        
-            </div>
             </div>
         </div>
     </body>
