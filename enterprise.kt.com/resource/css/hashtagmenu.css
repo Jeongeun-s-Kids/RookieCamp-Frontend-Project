@@ -2,31 +2,39 @@
     width: 130px;
     z-index: 100;
     position: fixed;
-    top:50%;
+    top:20%;
     margin-left: 10px;
     text-align: center;
 }
 
-#hashtag_menu h2{
+#hashtag_menu h1{
     font-weight: bold;
     background-color: rgba(35, 33, 71, 1);
     color: white;
     text-align: center;
     width: 180px;
     height: 30px;
-    line-height: 30px;
+    line-height: 25px;
     border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 0 5px 5px gray;
+    /* box-shadow: 0 5px 5px gray; */
     letter-spacing: 1px;
 }
 
-.conn{
+.conn_circle{
     background-color: rgba(35, 33, 71, 1);
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    margin-left: 80px;
+    margin-left: 83px;
+    margin-top: -5px;
+}
+
+.conn_bar{
+    background-color: rgba(35, 33, 71, 1);
+    width: 3px;
+    height: 25px;
+    margin-left: 88.5px;
     margin-top: -10px;
 }
 
@@ -34,8 +42,13 @@
     color: rgba(35, 33, 71, 1);
     background-color: rgba(217, 217, 217, 1);
     width: 140px;
-    height: 25px;
+    height: auto;
     margin-left: 20px;
     text-align: center;
     border-radius: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: small;
 }
