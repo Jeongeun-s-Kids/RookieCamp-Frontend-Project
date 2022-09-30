@@ -103,7 +103,9 @@
                     url:query_url,
                     data: JSON.stringify(params),
                     success:function(res){
-                        $("result_num").append(Object.keys(res).length);
+                        $('#result_num').empty();
+                        $("#result_num").append(Object.keys(res).length);
+                        console.log(Object.keys(res).length);
                         $('#card_list').empty();
                         res.forEach(result => {
                             let str = '<div class="lists">'
