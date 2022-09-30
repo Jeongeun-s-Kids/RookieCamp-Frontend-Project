@@ -1536,7 +1536,7 @@ strong,.bold {font-weight:500;}
 /* check products */
 .recommend_prod_btn_wrap {text-align:center;}
 .recommend_prod_btn_wrap.replay {margin-top:40px;}
-.recommend_prod_list {font-size:0; text-align: center;}
+.recommend_prod_list {font-size:0; text-align: left; margin-left: 180px;}
 .recommend_prod_list .lists {display:inline-block; position:relative; box-sizing:border-box; width:370px; height:190px; margin:30px 0 0 30px; padding:20px 140px 27px 30px; vertical-align:top; border:1px solid #3069B3; border-radius: 15px; background:#fff;}
 .recommend_prod_list .lists:hover *{ background-color: #3069B3; color:#fff !important;}
 .recommend_prod_list .lists:hover {background-color: #3069B3; color:#fff !important;}
