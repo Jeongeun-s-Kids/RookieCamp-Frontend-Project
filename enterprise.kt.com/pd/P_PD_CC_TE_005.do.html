@@ -58,6 +58,9 @@ fbq('track', 'PageView');
 <link rel="stylesheet" href="../resource/css/custom-72.css?ver=20220928044047">
 <!-- 퍼블리싱 css 끝 -->
 
+<!-- 커스텀 css -->
+<link rel="stylesheet" href="../resource/css/hashtagmenu.css">
+
 <style>
 /* img[data-image="thumbnail"] { width:340px !important; height:230px !important; display:inline-block;data-link-page=' + dataLinkPage + ' } */
 .kt_mb div.search_total, .kt_pc div.search_total {display:none;}
@@ -92,6 +95,8 @@ var appEnv = 'prd';
 <script language="javascript" src="../pc/js/common/myollehCommon-72.js?ver=20220928044047" type="text/javascript"></script>
 <script language="javascript" src="../pc/js/common/autocomplete-72.js?ver=20220928044047" type="text/javascript"></script>
 <script type="text/javascript" src="../js/adobe/s_code.js"></script>
+
+
 
 <script type="text/javascript">
 // 쿠키값 공유를 위한 도메인 설정
@@ -906,6 +911,23 @@ try{
 					</div>
 				</div>
 				<div class="container">
+                    <div id="hashtag_menu">
+                        <h2>연관 검색어</h2>
+                        <script>
+                            function testString(){
+                                if(localStorage.getItem('category')){
+                                    console.log(localStorage.getItem('category'));
+                                }
+                            }
+                        </script>
+                        <button type="button" onclick="testString()">test</button>
+                        
+                        <div class="conn"></div>
+                        <nav id="hashtag_nav">
+                            <a href="">wef</a>
+                        </nav>
+                    </div>
+
 					<section class="section_intro">
 						<div class="mid">
 							<div class="tit">
@@ -3042,6 +3064,7 @@ try{
 <iframe name="frmSalesForce" style="width:0;height:0;border:0;margin:0;padding:0" width="0" height="0" border="0" scrolling="no" frameborder="0" allowtransparency="false" title="내용없음"></iframe>
 </div>
 	<!--// div.ktWarp -->
+<script type="text/javascript" src="C:\KT_FRONT\Project\RookieCamp-Frontend-Project\front\survey_1\js\scripts.js"></script>
 
 </body>
 </html>
