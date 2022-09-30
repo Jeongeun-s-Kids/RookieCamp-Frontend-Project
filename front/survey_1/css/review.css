@@ -174,5 +174,3 @@
 #myform input[type=radio]:checked ~ label[for=rate5]{
     text-shadow: 0 0 0 #6786F2; /* 마우스 클릭 체크 */
 }
-
-
