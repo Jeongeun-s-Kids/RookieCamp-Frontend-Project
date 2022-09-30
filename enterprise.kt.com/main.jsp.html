@@ -32,10 +32,10 @@
 
 <!--Modal-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 <!-- Facebook Pixel Code -->
@@ -147,29 +147,7 @@ $(function() {
     }, 500);
 });
 </script>
-
-<!-- Google Tag Manager (noscript) -->
-<!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNVR37F" 
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-End Google Tag Manager (noscript)
- -->
 <script type="text/javascript">
-//adobe통계용 문자열 
-/* var adobeStatics = "^www^KT-개인^마이^메인^준회원" ; 
-try{
-    if (adobeStatics!=null && adobeStatics!=''){
-           s.pageName =  adobeStatics ; 
-           //var s_code=s.t(); if(s_code)document.write(s_code);
-    }
-}catch(e){
-    
-}
-try{
-    //GA용 통계 스크립트 호출
-    ga('set', 'title', s.pageName); //GA용, adobe 통계 pageName을 그대로 호출 
-    ga('rollup.set', 'title', s.pageName); //Adobe s.pageName ga('send', 'pageview'); // GA용, 통계 전송 
-    ga('rollup.send', 'pageview'); 
-}catch(e){} ; */
 </script><script type="text/javascript" src="pc/js/btob/main.js"></script>
         <script type="text/javascript">
         var _banner_list04;
@@ -268,70 +246,6 @@ try{
                 }
             }).ready().resize();//ready가 붙으면, 로딩시에 호출 / resize가 붙으면 리사이즈 이벤트도 바인딩
 
-
-	/*************** 동영상일때 *******************/
-	/*
-			$('.main_visual_top').slick('slickPause');
-            var main_visual_top_itv;
-            main_visual_top_itv = setTimeout(function(){ $('.main_visual_top').slick('slickPlay'); },17000);
-            var main_visual_top_itv_chk = true;
-            if(main_visual_top_itv_chk){
-	            $('.main_visual_top').on('afterChange', function(){
-	                clearTimeout(main_visual_top_itv);
-	                $('.main_visual_top').slick('slickPlay');
-	                main_visual_top_itv_chk = false;
-	                $('.main_visual_top').off('afterChange');
-	            });
-        	}            
-            // 재생및정지 버튼 클릭
-            $('.slick_oper_play button').on('click',function(){
-                if($(this).hasClass('slick_stop')){
-					if(main_visual_top_itv_chk){
-						$('.main_visual_top').slick('slickPause');
-						$(this).hide().siblings('.slick_play').show().focus();
-						main_visual_top_itv_chk = false;
-					}else{
-	                    $('.main_visual_top').slick('slickPause');
-						$(this).hide().siblings('.slick_play').show().focus();
-					}
-                }else{
-                    $('.main_visual_top').slick('slickPlay');
-                    $(this).hide().siblings('.slick_stop').show().focus();
-                }
-            });
-      */
-	/*************** // 동영상일때 *******************/
-
-	/*************** 동영상아닐때 *******************/
-	//딜레이 시키는 부분
-            /*
-			$('.main_visual_top').slick('slickPause');
-            var main_visual_top_itv;
-            main_visual_top_itv = setTimeout(function(){ $('.main_visual_top').slick('slickPlay'); },5000);
-            var main_visual_top_itv_chk = true;
-            if(main_visual_top_itv_chk){
-	            $('.main_visual_top').on('afterChange', function(){
-	                clearTimeout(main_visual_top_itv);
-	                $('.main_visual_top').slick('slickPlay');
-	                main_visual_top_itv_chk = false;
-	                $('.main_visual_top').off('afterChange');
-	            });
-        	}
-            
-            // 재생및정지 버튼 클릭
-            $('.slick_oper_play button').on('click',function(){
-                if($(this).hasClass('slick_stop')){
-					$('.main_visual_top').slick('slickPause');
-					$(this).hide().siblings('.slick_play').show().focus();
-                }else{
-                    $('.main_visual_top').slick('slickPlay');
-                    $(this).hide().siblings('.slick_stop').show().focus();
-                }
-            });
-            */
-	/*************** // 동영상아닐때 *******************/
-
-
             $('.banner_list03').slick({
                 centerMode: false,
                 infinite: true,
@@ -403,18 +317,6 @@ try{
                 }
             });
 
-        /*
-            $('.banner_list04').on('beforeChange', function(event, { slideCount: count }, currentSlide, nextSlide){
-
-              let selectors = [nextSlide, nextSlide - count, nextSlide + count].map(n => `[data-slick-index=""]`).join(', ');
-
-                console.log("아아아 => "+selectors);
-            });
-
-            $('[data-slick-index="0"]').addClass('slick-now');
-        */
-
-
             txtChng();
             //하단 슬라이더 내, 텍스트 체인지
             function txtChng(){
@@ -462,18 +364,6 @@ try{
             var $sldItem = $('.banner_list03 .slick-slide .item'),
                 $btnLink = $('.banner_list03 .btn_link');
 
-                /*
-            $sldItem.on('mouseenter focusin',function(){
-                $(this).find('.txt_wrap').css({'display':'table','width':'100%','height':'415px'});
-                if($(window).width() < 761){
-                    $(this).find('.txt_wrap').hide();
-                }
-            });
-            $sldItem.on('mouseleave',function(){
-                $(this).find('.txt_wrap').hide();
-            });
-            */
-
             $btnLink.on('focus',function(){
                 $(this).parents().siblings('.txt_flag').hide();
             });
@@ -517,25 +407,6 @@ try{
             popMovieOpen();*/
 
         });
-        /* function call_ga(){
-            var adobeStatics = "^www^KT-개인^마이^메인^준회원" ; 
-            try{
-                if (adobeStatics!=null && adobeStatics!=''){
-                    s.pageName =  adobeStatics ; 
-                    //var s_code=s.t(); if(s_code)document.write(s_code);
-                }
-            }catch(e){
-                console.error(e.message, e.name);
-            }
-            try{
-                //GA용 통계 스크립트 호출
-                ga('set', 'title', s.pageName); //GA용, adobe 통계 pageName을 그대로 호출 
-                ga('rollup.set', 'title', s.pageName); //Adobe s.pageName ga('send', 'pageview'); // GA용, 통계 전송 
-                ga('rollup.send', 'pageview'); 
-            }catch(e){
-            	console.error(e.message, e.name);
-            } ;
-        } */
         </script>
         <div class="main_head_news_wrap" id="main_head_news_wrap">
             <div class="full_wrap">
@@ -790,17 +661,6 @@ try{
                             </div>
                         </div>
                     </li>
-                    <!-- <li><a href="#" class="item">마이비즈</a>
-                        <div class="depth2">
-                            <ul>
-                                <li><a href="#" class="item">요금조회/납부</a></li>
-                                <li><a href="#" class="item">가입상품 관리</a></li>
-                                <li><a href="#" class="item">신청 변경</a></li>
-                                <li><a href="#" class="item">신청법인 명의 본인 확인</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
-                    <!-- <li class="dx_summit"><a href="/bt/P_BT_CR_VW_003.do" class="item">Digital-X Summit 2022</a></li>  -->
                 </ul>
             </div>
             
@@ -826,25 +686,6 @@ try{
                                             <button type="button" class="btn_srch" id="btnSearchKeyword">검색</button>
                                         </div>
                                     </div>
-                                    <!-- <div class="sch_right" >
-                                        <div class="roll_wrap">
-                                            <div class="roll_cont">
-                                                <h2>실시간 인기 검색어</h2>
-                                                <ol id="popKeywordList">
-                                                    <li><a href="#"><span class="rank">1</span>AI로봇</a><i class="new">NEW</i></li>
-                                                    <li><a href="#"><span class="rank">2</span>비즈메카</a><i class="minus">1</i></li>
-                                                    <li><a href="#"><span class="rank">3</span>비즈메카EZ</a><i class="new">NEW</i></li>
-                                                    <li><a href="#"><span class="rank">4</span>비즈메카 헤어짱</a><i class="zero">0</i></li>
-                                                    <li><a href="#"><span class="rank">5</span>비즈메카 POS</a><i class="plus">2</i></li>
-                                                    <li><a href="#"><span class="rank">6</span>비즈메카 콜센터 LIte</a><i class="minus">3</i></li>
-                                                    <li><a href="#"><span class="rank">7</span>비즈메카 헤어짱</a><i class="new">NEW</i></li>
-                                                    <li><a href="#"><span class="rank">8</span>비즈메카</a><i class="zero">0</i></li>
-                                                    <li><a href="#"><span class="rank">9</span>AI로봇</a><i class="plus">2</i></li>
-                                                    <li><a href="#"><span class="rank">10</span>콜센터</a><i class="new">NEW</i></li>
-                                                </ol>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                     <!-- [S] input 입력시 노출 -->
                                     <div class="search_result">
                                         <div class="fleft">
@@ -3515,17 +3356,15 @@ try{
     <style>
 
         .modal-top {
-            width: 700px;
-            height: 300px;
+            width: 600px;
+            height: 500px;
             position: absolute;
             z-index: 1000;
-            top: 30%;
+            top: 20%;
             left: 50%;
-            margin-left:-350px;
+            margin-left:-300px;
             background: #ffffff;
             border-radius: 10px;
-
-
         }
         /* .center {
             position: absolute;
@@ -3543,8 +3382,8 @@ try{
             height: 800px; */
             text-align: center;
             opacity: 0.5;
-            width: 700px;
-            height: 400px;
+            /* width: 700px;
+            height: 400px; */
             position: absolute;
             z-index: 1000;
         }
@@ -3556,34 +3395,33 @@ try{
     
         
         @font-face {
-            font-family: 'kt_font';
-            src: url('NotoSansKR-Medium.otf') format('truetype');
+            font-family: 'kt_modal_font';
+            src: url('KTB.woff') format('truetype');
         }
 
         /* .dlg-h .dlg-bb{display: inline;}
         .dlg-h .dlg-tb{display: inline;}
         .dlg-h .dlg-tbold{display: inline;} */
-        .dlg-bb{font-family: 'kt_font'; font-weight: bold; background-color: #92B5F1;}
-        .dlg-tb{font-family: 'kt_font'; font-weight: bold; color: #4272d9;}
-        .dlg-tbold{font-family: 'kt_font'; font-weight: bold;}
+        .dlg-bb{font-family: 'kt_modal_font'; font-weight: 900; background-color: #92B5F1;}
+        .dlg-tb{font-family: 'kt_modal_font'; font-weight: 900; color: #4272d9;}
+        .dlg-tbold{font-family: 'kt_modal_font'; font-weight: 900;}
         
-    
         h2#dlg-header {
-            font-family: 'kt_font';
+            font-family: 'kt_modal_font';
             font-size:28px;
             font-weight: bold;
             text-transform: initial;
             letter-spacing: -0.025em;
-            margin-bottom: 30px;
             text-align: center;
             margin-top: 50px;
+            margin-bottom: 10px;
 
         }
         #dlg-content {
-        font-family: 'kt_font';
-        font-weight: 300;
-        font-style: italic;
-        letter-spacing: 0.015em;
+            font-family: 'kt_modal_font';
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 0.015em;
         }
         /* #dlg-prompt .button {
         margin: 10px 10px;
@@ -3591,11 +3429,7 @@ try{
         }
         #dlg-prompt .button { margin: 10px 10px; border-radius: 15px; } */
         
-        #dlg-prompt>.button{
-            /* margin: 0 auto; */
-            margin:20px;
-            border-radius: 15px;
-        }
+        #dlg-prompt>.button{ /* margin: 0 auto; */ margin:20px; border-radius: 15px;}
     
   
         .dialog_state:checked ~ .main_area,
@@ -3603,12 +3437,11 @@ try{
         filter: blur(6px);
         }
     
-        /* 버튼 */
-        
+        /***** 버튼 *****/
         .button, a.button {
-            font-family: 'kt_font';
+            font-family: 'kt_modal_font';
             display: inline-block;
-            padding: 50px 15px;
+            /* padding: 50px 15px; */
             text-decoration: none;
             letter-spacing: 0.075em;
             font-weight: 300;
@@ -3620,78 +3453,31 @@ try{
             padding-right: 40px;
         }
         /* 빠른 찾기 버튼 */
-        .btn1:hover{color: #fff; background: #4272d9; border: 1px solid #4272d9; font-weight: bold;}
-        .btn1{color: #4272d9; background: #fff; border: 1px solid #4272d9; font-weight: bold; padding: 50px 50px;}
-        /* 홈으로 가기 버튼 */
+        .btn1:hover{color: #fff; background: #4272d9; border: 1px solid #4272d9; font-weight: 900;}
+        .btn1{color: #4272d9; background: #fff; border: 1px solid #4272d9; font-weight: 900; width: 400px; height:50px; padding: 12px 40px;}
+        /* 홈으로 가기 버튼
         .btn2:hover{color: #fff; background: #6199B7; border: 1px solid #6199B7;font-weight: bold;}
         .btn2{color: #6199B7; background: #fff; border: 1px solid #6199B7;font-weight: bold;}
         .btn2>a{font-weight: bold;}
         .btn2:hover *{ color:#6199B7 !important;font-weight: bold; }
-        .btn2.a:hover {color:#fff !important;font-weight: bold;}
+        .btn2.a:hover {color:#fff !important;font-weight: bold;} */
         .btn-close {float:right;}
 
         .enterprise_img {width: 100px; height: 18px;}
         
-        .button:hover {
-        color: #6199B7;
-        background: #6199B7;
-        box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-        /*transform: scale(1.01);*/
-        }
-        .button.positive {
-        border-color: #4272d9;
-        color: #4272d9;
-        padding-left: 60px;
-        padding-right: 50px;
-        margin-left: 100px;
-        
-
-        }
-        .button.positive:hover {
-        border-color: #4272d9;
-        color: #fff;
-        background-color: #4272d9;
-        }
-
-
+        .button:hover {color: #6199B7; background: #6199B7; box-shadow: 0 1px 1px rgba(0,0,0,0.05);/*transform: scale(1.01);*/}
+        .button.positive { border-color: #4272d9;color: #4272d9; padding-left: 60px; padding-right: 50px;margin-left: 100px;}
+        .button.positive:hover {border-color: #4272d9;color: #fff;background-color: #4272d9;}
+        button + button.positive { margin-left: 100px;}
     
-        button + button.positive {
-            margin-left: 100px;
+        .icon { vertical-align: middle;line-height: inherit;font-size: 1.75em; }
     
-        }
-    
-        .icon {
-        vertical-align: middle;
-        line-height: inherit;
-        font-size: 1.75em;
-        }
-    
-        .btn-close {
-            float:right;
-        }
-    
-        .modal-body{
-            padding-bottom: 80px;
-            text-align: center;
-        }
+        .btn-close { float:right;}
+        .modal-body{padding-bottom: 80px;text-align: center;}
         
         /* The Close Button */
-        .close {
-        color: #aaa;
-        float: right;
-        font-size: 40px
-        ;
-        font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-        }
-
-    
+        .close {color: #aaa;float: right;font-size: 40px;font-weight: bold;}
+        .close:hover, .close:focus {color: black;text-decoration: none;cursor: pointer;}
         </style>
 
     <script type="text/javascript">
@@ -3712,9 +3498,6 @@ try{
         }
 }
     </script>
-
-
-    
         <!-- The Modal -->
         <div class="modal-top" data-bs-backdrop="static">
         <!-- <div class="modal center" id="onload" > -->
@@ -3735,17 +3518,16 @@ try{
                                 <span class="close">&times;</span>
                                 <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
                                 <h2 id='dlg-header'>
-                                        <span class="dlg-bb">맞춤형 KT 서비스를</span>&nbsp;
+                                        <span class="dlg-bb">맞춤형 KT 서비스를</span><br><br>
                                         <span class="dlg-tb">쉽고 빠르게</span>&nbsp;
                                         <span class="dlg-tbold">찾아보시겠습니까?</span>  
                                 </h2>
-                                <!-- <div id='dlg-content'>빠른 찾기를 통해 원하는 KT의 서비스를 신속하게 찾아보세요</div> -->
+                                <div>
+                                    <img src="./images/idx/kt_charcter.png" style="width: 350px; height: 250px;"/>
+                                </div>
                                 <div id='dlg-prompt'>
-                                    <div class='button positive btn1' onclick="location.href='../survey_1/survey.html'">
-                                        찾기&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
+                                    <div class='button positive btn1' onclick="location.href='../survey_1/survey.html'">찾기&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
                                     </div>
-                                    <div class='button btn2'><a href="https://enterprise.kt.com/main.jsp" style="text-decoration: none;">
-                                        <img src="gnbLogo_p.png" class="enterprise_img"></a>
                                     </div>
                                 </div>
                             </div>
@@ -3755,7 +3537,4 @@ try{
             </div>
         </div>
         <div class="modal-backdrop show"></div> 
-
-
-
 </html>
