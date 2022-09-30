@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3"
+  }
+}
