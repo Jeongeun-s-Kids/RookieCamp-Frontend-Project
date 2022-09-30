@@ -21,35 +21,21 @@
     letter-spacing: 1px;
 }
 
-.conn_circle{
+.conn{
     background-color: rgba(35, 33, 71, 1);
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    margin-left: 83px;
+    margin-left: 80px;
     margin-top: -10px;
 }
 
-.conn_bar{
-    background-color: rgba(35, 33, 71, 1);
-    width: 5px;
-    height: 25px;
-    /* border-radius: 50%; */
-    margin-left: 88px;
-    margin-top: -10px;
-}
-
-
-#hashtag_div{
+#hashtag_nav{
     color: rgba(35, 33, 71, 1);
     background-color: rgba(217, 217, 217, 1);
-    font-weight: bold;
-    font-size: medium;
     width: 140px;
     height: 25px;
     margin-left: 20px;
     text-align: center;
     border-radius: 10px;
-    line-height: 22px;
-    letter-spacing: 1px;
 }
