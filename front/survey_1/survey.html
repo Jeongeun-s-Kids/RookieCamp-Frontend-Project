@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Survey</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons / font-awesome icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/content.css" rel="stylesheet" />
+    <link href="css/review.css" rel="stylesheet" />
+    <!-- js -->
+    <script src='http://code.jquery.com/jquery-3.3.1.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #containers {
+            font-family: "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif !important;
+            margin: 0;
+        }
+        .gnb .depth2{
+            padding-left: 210px;
+            padding-top: 57px;
+        }
+        .btnbtn {
+            margin-top: 550px !important;
+            text-align: center;
+        }
+        .mb-2 {
+            margin-bottom: 54px !important;
+        }
+        .bg-b{
+            background: #cfe2fa;
+            font-weight: bold;
+        }
+        .step{
+            color:#4272D9;
+            font-weight: bold !important;
+        }
+        .sec1{
+            background-color:  #f2f7fd !important;
+        }
+        .btn:hover{
+            border-color : #92b5f1 !important;
+        }
+
+        .description{
+            text-align: left;
+        }
+
+    </style>
+    <script>
+
+        let test = {}
+
+        $(document).ready(function(){
+            $('#resultBtn').click(function(){
+                console.log('clicked');
+                var names = {};
+                var idx=1;
+                var params={
+                    "cnt":idx,
+                    "category": "food",
+                }
+                $('#lists_3 input:checked').each(function(){
+                    
+                    params['product'+(idx++)] = this.value;
+                    
+                });
+                idx--;
+                params['cnt'] = idx;
+                console.log(params);
+                var query_url = 'http://localhost:9999/product'
+                switch(idx){
+                    case 1:
+                        query_url += '/productOne';
+                        break;
+                    case 2:
+                        query_url += '/productTwo';
+                        break;
+                    case 3:
+                        query_url += '/productThree';
+                        break;
+                }
+            
+                $.ajax({
+                    headers: { 
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                    },
+                    type:'POST',
+                    url:query_url,
+                    data: JSON.stringify(params),
+                    success:function(res){
+                        $("result_num").append(Object.keys(res).length);
+                        $('#card_list').empty();
+                        res.forEach(result => {
+                            let str = '<div class="lists">'
+                            str +='<dl class="prod_info" onclick="location.href=' + "'" + result.link + "'" + ';">' 
+                                    + '<dt class="description">' 
+                                    + '<img class="ico" src=' + "'" + './res/icons/'+ result.category + '/' + result.icon + "'" + 'style="width: 70px; height:70px;" alt=""/>'
+                                    + '<span>'+ result.name + '</span>' + '</dt>'
+                                    + '<dd class="description">' + result.content + '</dd>'
+                                    + '</dl></div>';
+
+                            $("#card_list").append(str);
+                        });
+
+
+
+                    },
+                    error:function(XMLHttpRequest, textStatus, errorThrown){
+                        alert('통신 실패.');
+                        console.log('통신 실패.');
+                    }
+                });
+            });
+        });
+        function fnMove(seq){
+            console.log('move');
+            var offset = $("#recommend_"+ seq).offset();
+            $('html, body').animate({scrollTop : offset.top}, 400);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="kt-head" class="kt-head">
+    </div>
+    <!-- survey page start-->
+    <div id="containers" aria-hidden="false">
+        <!-- Page Content-->
+        <div id="content" class="customer_center sec1">
+            <div class="top_info" style="padding-top: 50px;">
+                <div class="tit">
+                    <h2 class="tit00">나를 위한&nbsp;</h2><h2 class="tit00_1">맞춤형&nbsp;서비스</h2><h2 class="tit00">가 무엇일까요?</h2>
+                </div>
+            </div>
+            <div class="conts_box first">
+                <h3 class="tit01"><br></h3>
+            </div>
+            <div class="conts_box">
+                <div class="option_select_wrap">
+                    <!-- 사업규모 -->
+                    <div class="lists">
+                        <p class="qst_tit"><span class="step">Step 1.</span><span class="bg-b">사업 규모</span></p>
+                        <ul id="lists_1" class="option_slt">
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate1_1" name="optioin_cate1" data-rename="자영업" value="R101" checked>
+                                    <label for="option_cate1_1">자영업</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate1_2" name="optioin_cate1" data-rename="중소기업" value="R102">
+                                    <label for="option_cate1_2">중소기업</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate1_3" name="optioin_cate1" data-rename="대기업"
+                                        value="R103">
+                                    <label for="option_cate1_3">대기업</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- step1 -->
+                    <div class="lists">
+                        <p class="qst_tit"><span class="step">Step 2.</span><span class="bg-b">업종 선택</span></p>
+                        <ul id="lists_2" class="option_slt float">
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate2_1" name="optioin_cate2" data-rename="서비스업"
+                                        value="R113" checked>
+                                    <label for="option_cate2_1">서비스업</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate2_2" name="optioin_cate2" data-rename="교육"
+                                        value="R114">
+                                    <label for="option_cate2_2">교육</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate2_3" name="optioin_cate2" data-rename="오피스"
+                                        value="R115">
+                                    <label for="option_cate2_3">오피스</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate2_4" name="optioin_cate2" data-rename="요식업"
+                                        value="R116">
+                                    <label for="option_cate2_4">요식업</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="red_wrap2">
+                                    <input type="radio" id="option_cate2_5" name="optioin_cate2" data-rename="도/소매"
+                                        value="R117">
+                                    <label for="option_cate2_5">도/소매</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- step2 -->
+                    <div class="lists">
+                        <p class="qst_tit mb-2">
+                            <span class="step">Step 3.</span>
+                            <span class="bg-b">관심 분야 선택</span>
+                            <span class="s_txt">(다중 선택 가능)</span>
+                        </p>
+                        <ul id="lists_3" class="option_slt">
+                            <li>
+                                <span class="chk_wrap2">
+                                    <input type="checkbox" id="option_cate3_1" name="optioin_cate3" data-rename="통신"
+                                        value="communication" checked>
+                                    <label for="option_cate3_1">통신</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="chk_wrap2">
+                                    <input type="checkbox" id="option_cate3_2" name="optioin_cate3"
+                                        data-rename="스마트 서비스" value="smart">
+                                    <label for="option_cate3_2">스마트 서비스</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="chk_wrap2">
+                                    <input type="checkbox" id="option_cate3_3" name="optioin_cate3" data-rename="미디어/광고"
+                                        value="media">
+                                    <label for="option_cate3_3">미디어/광고</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="chk_wrap2">
+                                    <input type="checkbox" id="option_cate3_4" name="optioin_cate3" data-rename="보안"
+                                        value="security">
+                                    <label for="option_cate3_4">보안</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="chk_wrap2">
+                                    <input type="checkbox" id="option_cate3_5" name="optioin_cate3" data-rename="마케팅"
+                                        value="marketing">
+                                    <label for="option_cate3_5">마케팅</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 결과보기 -->
+            <div class="btnbtn"> 
+
+                <button id="resultBtn" type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
+                    onclick="fnMove('result')">결과 확인</button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+    <!-- survey page end-->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      
+    <!-- reco page start-->
+    <div class="ui_fitProd_cont collapse" id="recommend_result">
+        <div class="conts_box">
+            <div class="decs_tit" style="padding-top: 50px;">
+                <div class="tit">
+                    <h2 class="tit00_1">맞춤형 서비스</h2><h2 class="tit00">를 <span class="bg-b">살펴보세요!</span> <em id='result_num'class="em ui_pdcart_item_cnt"></em></h2>
+                </div>
+            </div>
+            <div id='card_list' class="recommend_prod_list ui_recommend_prod_list banner_wrap"></div>
+            <div class="recommend_prod_btn_wrap replay">
+                <button type="button" class="recommend_prod_btn ui_prod_reset_btn">다시하기</button>
+            </div>
+        </div>
+    </div>
+    <!-- reco page end -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+    <!-- review page start-->
+    <div class="popup">
+        <div class="contents">
+            <div class="title">도움이 되셨나요? 불만족하셨다면 이유를 적어주세요</div>
+            <div class="star">
+                <form name="myform" id="myform" method="post" action="./save">
+                    <fieldset>
+                        <!-- <legend>만족도 조사</legend> -->
+                        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+                        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+                        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+                        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+                        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="review">
+                <!-- <div class="warning_msg"><br>불만족하셨다면 이유를 적어주세요 서비스 품질 향상에 도움이 됩니다 :)</div> -->
+                <div class="input-box">
+                    <input id="review_text" type="text" name="review_text">
+                </div>
+            </div>
+        </div>
+        <div class="cmd">
+            <div class="cmd1"><input type="button" name="save" class="button" id="save" value="제출"></div>
+            <!-- <div class="cmd2"><input type="button" name="btnclose" class="button" value="취소"></div> -->
+        </div>
+    </div>
+    <!-- review page end-->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+</body>
+
+</html>
