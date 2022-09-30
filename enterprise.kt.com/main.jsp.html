@@ -30,6 +30,14 @@
 	<meta property="og:image:width" content="193">
 <meta property="og:image:height" content="101">
 
+<!--Modal-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -1312,7 +1320,8 @@ try{
         	location.href = $("#mlogoutUrl").val() + currUrl;
         }
     </script> <!-- pc.mobile content -->
-        <div class="kt_pc kt_both main">
+        <div class="kt_pc kt_both main modal-backdrop show">
+
             <div class="wrap_top">
                 <div class="main_slider" style="position:relative">
 					<div class="main_visual_dot">
@@ -3503,5 +3512,250 @@ try{
 </div>
 	<!--// div.ktWarp -->
 
-</body>
+    <style>
+
+        .modal-top {
+            width: 700px;
+            height: 300px;
+            position: absolute;
+            z-index: 1000;
+            top: 30%;
+            left: 50%;
+            margin-left:-350px;
+            background: #ffffff;
+            border-radius: 10px;
+
+
+        }
+        /* .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        } */
+    
+        .modal{
+            /* position: absolute; */
+            /* left:100px;
+            top:100px; */
+            float:none;
+            /* width:700px;
+            height: 800px; */
+            text-align: center;
+            opacity: 0.5;
+            width: 700px;
+            height: 400px;
+            position: absolute;
+            z-index: 1000;
+        }
+    
+        .modal-backdrop
+        {
+            opacity:0.6 !important;
+        }
+    
+        
+        @font-face {
+            font-family: 'kt_font';
+            src: url('NotoSansKR-Medium.otf') format('truetype');
+        }
+
+        /* .dlg-h .dlg-bb{display: inline;}
+        .dlg-h .dlg-tb{display: inline;}
+        .dlg-h .dlg-tbold{display: inline;} */
+        .dlg-bb{font-family: 'kt_font'; font-weight: bold; background-color: #92B5F1;}
+        .dlg-tb{font-family: 'kt_font'; font-weight: bold; color: #4272d9;}
+        .dlg-tbold{font-family: 'kt_font'; font-weight: bold;}
+        
+    
+        h2#dlg-header {
+            font-family: 'kt_font';
+            font-size:28px;
+            font-weight: bold;
+            text-transform: initial;
+            letter-spacing: -0.025em;
+            margin-bottom: 30px;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+        #dlg-content {
+        font-family: 'kt_font';
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 0.015em;
+        }
+        /* #dlg-prompt .button {
+        margin: 10px 10px;
+        border-radius: 15px;
+        }
+        #dlg-prompt .button { margin: 10px 10px; border-radius: 15px; } */
+        
+        #dlg-prompt>.button{
+            /* margin: 0 auto; */
+            margin:20px;
+            border-radius: 15px;
+        }
+    
+  
+        .dialog_state:checked ~ .main_area,
+        .main_area.dialog_open {
+        filter: blur(6px);
+        }
+    
+        /* 버튼 */
+        
+        .button, a.button {
+            font-family: 'kt_font';
+            display: inline-block;
+            padding: 50px 15px;
+            text-decoration: none;
+            letter-spacing: 0.075em;
+            font-weight: 300;
+            font-size: 20px;
+            border-radius: 4px;
+            transition: .1s all;
+            cursor: pointer;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        /* 빠른 찾기 버튼 */
+        .btn1:hover{color: #fff; background: #4272d9; border: 1px solid #4272d9; font-weight: bold;}
+        .btn1{color: #4272d9; background: #fff; border: 1px solid #4272d9; font-weight: bold; padding: 50px 50px;}
+        /* 홈으로 가기 버튼 */
+        .btn2:hover{color: #fff; background: #6199B7; border: 1px solid #6199B7;font-weight: bold;}
+        .btn2{color: #6199B7; background: #fff; border: 1px solid #6199B7;font-weight: bold;}
+        .btn2>a{font-weight: bold;}
+        .btn2:hover *{ color:#6199B7 !important;font-weight: bold; }
+        .btn2.a:hover {color:#fff !important;font-weight: bold;}
+        .btn-close {float:right;}
+
+        .enterprise_img {width: 100px; height: 18px;}
+        
+        .button:hover {
+        color: #6199B7;
+        background: #6199B7;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+        /*transform: scale(1.01);*/
+        }
+        .button.positive {
+        border-color: #4272d9;
+        color: #4272d9;
+        padding-left: 60px;
+        padding-right: 50px;
+        margin-left: 100px;
+        
+
+        }
+        .button.positive:hover {
+        border-color: #4272d9;
+        color: #fff;
+        background-color: #4272d9;
+        }
+
+
+    
+        button + button.positive {
+            margin-left: 100px;
+    
+        }
+    
+        .icon {
+        vertical-align: middle;
+        line-height: inherit;
+        font-size: 1.75em;
+        }
+    
+        .btn-close {
+            float:right;
+        }
+    
+        .modal-body{
+            padding-bottom: 80px;
+            text-align: center;
+        }
+        
+        /* The Close Button */
+        .close {
+        color: #aaa;
+        float: right;
+        font-size: 40px
+        ;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+    
+        </style>
+
+    <script type="text/javascript">
+        window.onload = () => {
+            $('#onload').modal('show');
+        }
+    </script>
+
+    <script>
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }   
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+}
+    </script>
+
+
+    
+        <!-- The Modal -->
+        <div class="modal-top" data-bs-backdrop="static">
+        <!-- <div class="modal center" id="onload" > -->
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="text-body" >
+                        
+                        <!-- <h4 class="modal-title">Modal Title</h4> -->
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <div id='dialog'>
+                            <label id="dlg-back" for="dialog_state"></label>
+                            <div id='dlg-wrap'>
+                                <!-- <button  id="dlg-close" for="dialog_state">버튼</button> -->
+                                <span class="close">&times;</span>
+                                <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
+                                <h2 id='dlg-header'>
+                                        <span class="dlg-bb">맞춤형 KT 서비스를</span>&nbsp;
+                                        <span class="dlg-tb">쉽고 빠르게</span>&nbsp;
+                                        <span class="dlg-tbold">찾아보시겠습니까?</span>  
+                                </h2>
+                                <!-- <div id='dlg-content'>빠른 찾기를 통해 원하는 KT의 서비스를 신속하게 찾아보세요</div> -->
+                                <div id='dlg-prompt'>
+                                    <div class='button positive btn1' onclick="location.href='../survey_1/survey.html'">
+                                        찾기&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class='button btn2'><a href="https://enterprise.kt.com/main.jsp" style="text-decoration: none;">
+                                        <img src="gnbLogo_p.png" class="enterprise_img"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop show"></div> 
+
+
+
 </html>
