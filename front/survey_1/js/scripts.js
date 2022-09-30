@@ -1,7 +1,5 @@
 $(document).ready(function(){
     $('#resultBtn').click(function(){
-        console.log('clicked');
-        var names = {};
         var idx=1;
         var params={
             "cnt":idx,
@@ -37,12 +35,15 @@ $(document).ready(function(){
             url:query_url,
             data: JSON.stringify(params),
             success:function(res){
-                console.log(res[0].category);
-                localStorage.setItem('category', res[0].category);
+                let resultList = [];
+                
                 $('#result_num').empty();
                 $("#result_num").append(Object.keys(res).length);
                 $('#card_list').empty();
                 res.forEach(result => {
+
+                    resultList.push(result.name);
+
                     let str = '<div class="lists">'
                     str +='<dl class="prod_info" onclick="location.href=' + "'" + result.link + "'" + ';">' 
                             + '<dt class="description">' 
@@ -54,7 +55,7 @@ $(document).ready(function(){
                     $("#card_list").append(str);
                 });
 
-
+                localStorage.setItem('resultList', JSON.stringify(resultList));
 
             },
             error:function(XMLHttpRequest, textStatus, errorThrown){
