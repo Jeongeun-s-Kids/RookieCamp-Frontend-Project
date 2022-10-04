@@ -47,7 +47,7 @@
             text-align: center;
         }
         .mb-2 {
-            margin-bottom: 54px !important;
+            margin-bottom: 40px !important;
         }
         .bg-b{
             background: #cfe2fa;
@@ -66,6 +66,7 @@
 
         .description{
             text-align: left;
+            line-height: 140%;
         }
 
         @font-face {
@@ -148,6 +149,11 @@
             var offset = $("#recommend_"+ seq).offset();
             $('html, body').animate({scrollTop : offset.top}, 400);
         }
+        function fnMove1(seq){
+            console.log('move');
+            var offset = $(".top_"+ seq).offset();
+            $('html, body').animate({scrollTop : offset.top}, 400);
+        }
     </script>
 </head>
 
@@ -213,9 +219,9 @@
                         <ul id="lists_2" class="option_slt float">
                             <li>
                                 <span class="red_wrap2">
-                                    <input type="radio" id="option_cate2_1" name="optioin_cate2" data-rename="서비스업"
+                                    <input type="radio" id="option_cate2_1" name="optioin_cate2" data-rename="요식업"
                                         value="R113" checked>
-                                    <label for="option_cate2_1">서비스업</label>
+                                    <label for="option_cate2_1">요식업</label>
                                 </span>
                             </li>
                             <li>
@@ -234,9 +240,9 @@
                             </li>
                             <li>
                                 <span class="red_wrap2">
-                                    <input type="radio" id="option_cate2_4" name="optioin_cate2" data-rename="요식업"
+                                    <input type="radio" id="option_cate2_4" name="optioin_cate2" data-rename="서비스업"
                                         value="R116">
-                                    <label for="option_cate2_4">요식업</label>
+                                    <label for="option_cate2_4">서비스업</label>
                                 </span>
                             </li>
                             <li>
@@ -297,7 +303,6 @@
             </div>
             <!-- 결과보기 -->
             <div class="btnbtn"> 
-
                 <button id="resultBtn" type="button" class="btn submit h60 ui_fitSubmit" data-bs-toggle="collapse" data-bs-target="#recommend_result"
                     onclick="fnMove('result')">결과 확인</button>
             </div>
@@ -317,7 +322,8 @@
             </div>
             <div id='card_list' class="recommend_prod_list ui_recommend_prod_list banner_wrap"></div>
             <div class="recommend_prod_btn_wrap replay">
-                <button type="button" class="recommend_prod_btn ui_prod_reset_btn">다시하기</button>
+                <button type="button" class="recommend_prod_btn ui_prod_reset_btn"
+                onclick="fnMove1('info')">다시하기</button>
             </div>
         </div>
     </div>
