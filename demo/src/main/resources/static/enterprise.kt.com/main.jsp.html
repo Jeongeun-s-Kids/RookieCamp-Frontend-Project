@@ -3476,7 +3476,7 @@ $(function() {
         .modal-body{padding-bottom: 80px;text-align: center;}
         
         /* The Close Button */
-        .close {color: #aaa;float: right;font-size: 40px;font-weight: bold;}
+        .close {color: #aaa;float: right;font-size: 40px;font-weight: bold; margin-top: 10px; margin-right: 10px;}
         .close:hover, .close:focus {color: black;text-decoration: none;cursor: pointer;}
         </style>
 
@@ -3484,8 +3484,10 @@ $(function() {
         <!-- The Modal -->
         <div class="modal-top" data-bs-backdrop="static">
         <!-- <div class="modal center" id="onload" > -->
+            <span class="close">&times;</span>
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
+                    
                     <!-- Modal Header -->
                     <div class="text-body" >
                         
@@ -3498,7 +3500,7 @@ $(function() {
                             <label id="dlg-back" for="dialog_state"></label>
                             <div id='dlg-wrap'>
                                 <!-- <button  id="dlg-close" for="dialog_state">버튼</button> -->
-                                <span class="close">&times;</span>
+                                <!-- <span class="close">&times;</span> -->
                                 <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
                                 <h2 id='dlg-header'>
                                         <span class="dlg-bb">맞춤형 KT 서비스를</span><br><br>
