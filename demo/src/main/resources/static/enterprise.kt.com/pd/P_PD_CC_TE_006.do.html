@@ -57,14 +57,14 @@ fbq('track', 'PageView');
 <link rel="stylesheet" href="../resource/css/content-72.css?ver=20220928044047">
 <link rel="stylesheet" href="../resource/css/custom-72.css?ver=20220928044047">
 <!-- 퍼블리싱 css 끝 -->
-
+<link href="../resource/css/review.css" rel="stylesheet" />
 <style>
 /* img[data-image="thumbnail"] { width:340px !important; height:230px !important; display:inline-block;data-link-page=' + dataLinkPage + ' } */
 .kt_mb div.search_total, .kt_pc div.search_total {display:none;}
 .foot_search_total, .footer {display:none;} 
 </style><!-- 개별페이지들의 css 영역 -->
 	
-	<script language="javascript" src="../resource/js/jquery-1.8.0.min.js"></script>
+<script language="javascript" src="../resource/js/jquery-1.8.0.min.js"></script>
 <script language="javascript" src="../pc/js/jquery/jquery-ui.min.js" type="text/javascript"></script>
 <script language="javascript" src="../resource/js/kakao.min.js"></script>
 <script language="javascript" src="../resource/js/custom.js"></script>
@@ -1420,84 +1420,39 @@ try{
     <button type="button" class="top">최상단으로</button>
 </div>
 
-<div class="foot_search_total">
+<!-- <div class="foot_search_total">
     <p class="search_total_txt01">비즈니스 솔루션 문의 및 상품 문의에 이르기까지 KT가 도와드립니다.</p>
     <p class="search_total_txt02">(기업 상담) 1588-0114</p>
     <a href="../cs/P_CS_CQ_001.do.html" class="search_total_btn" data-btn-counsel="">1:1 온라인 문의</a>
-</div>
-
-<div class="common_notice_bar">
-    <div class="wrap" id="mainNotice">
-    </div>
-</div>
+</div> -->
 
 <!-- footer -->
 <div class="footer">
-    <div class="inner kt_pc">
-        <div class="foot_link">
-            <ul class="link bar">
-                <li><a href="https://corp.kt.com/html/etc/agreement_01.html" target="_blank" title="새창열림">이용약관</a><!-- title 2020-12-29 수정 -->
-                <li><a href="https://corp.kt.com/html/etc/agreement_04.html" target="_blank" title="새창열림">기업상품 약관</a></li><!-- title 2020-12-29 수정 -->
-                <li><a href="https://corp.kt.com/html/etc/legal.html" target="_blank" title="새창열림">법적고지</a></li><!-- title 2020-12-29 수정 -->
-                <!-- [D] : 개인정보처리방침 출력은 상황에 따라 다릅니다.  -->
-                <!-- enterprise.kt.com 로 진입했을때 --><li><a href="../cs/privacy.do.html"><strong>개인정보처리방침</strong></a></li><!-- title 2020-12-29 수정 -->
-                <!-- mybiz.kt.com 로 진입했을때 --><!-- <li><a href="https://corp.kt.com/html/etc/privacy.html" title="페이지이동"><strong>개인정보처리방침</strong></a></li>  -->
-                <li><a href="https://corp.kt.com/html/sustain/transparent/ethics_03.html" target="_blank" title="새창열림">윤리위반신고</a></li><!-- title 2020-12-29 수정 -->
-                <!-- <li><a href="https://mybiz.kt.com/masterreq/AmLogin.do" target="_blank" itle="페이지이동">법인명의 본인 확인 신청</a></li> -->
-            </ul>
-            <div class="group_info">
-                <a href="https://corp.kt.com/html/intro/group/ict_01.html" target="_blank" title="새창열림">그룹사 소개</a><!-- title 2020-12-29 수정 -->
+    <div class="popup">
+        <div class="contents">
+            <div class="title">도움이 되셨나요? 불만족하셨다면 이유를 적어주세요</div>
+            <div class="star">
+                <form name="myform" id="myform" method="post" action="./save">
+                    <fieldset>
+                        <!-- <legend>만족도 조사</legend> -->
+                        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+                        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+                        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+                        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+                        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="review">
+                <!-- <div class="warning_msg"><br>불만족하셨다면 이유를 적어주세요 서비스 품질 향상에 도움이 됩니다 :)</div> -->
+                <div class="input-box">
+                    <input id="review_text" type="text" name="review_text">
+                </div>
             </div>
         </div>
-        <div class="foot_mark_wrap">
-            <!-- <div class="mark_info">
-                <a href="http://www.ncsi.or.kr/score/ncsi_score.asp" target="_blank" title="새창"><img src="/resource/images/common/footer_mark01.png" alt="국가고객만족도 1위, 초고속인터넷, IPTV"></a>
-                <a href="https://ks-qei.ksa.or.kr/ks-qei/index.do" target="_blank" title="새창" ><img src="/resource/images/common/footer_mark02.png" alt="한국품질만족지수1위 이동전화 초고속인터넷 IPTV"></a>
-                <a href="https://ksgp.ksa.or.kr/ksgp/index.do" target="_blank" title="새창"><img src="/resource/images/common/footer_mark03.png" alt="한국서비스대상 5년 연속 종합대상"></a>
-                <a href="http://www.i-award.or.kr/Eco/Prize/2020/Awarded01.aspx" target="_blank" title="새창"><img src="/resource/images/common/footer_mark04.png" alt="iECO AWARD 20 WINNER"></a>
-                <a href="http://www.wiseuser.go.kr" target="_blank" title="새창"><img src="/resource/images/common/footer_mark05.png" alt="와이즈유저"></a>
-                </div> -->
-            <div class="address_info">
-                <p class="address">(주)케이티 대표이사 구현모 경기도 성남시 분당구 불정로 90 (정자동) 사업자등록번호 : 102-81-42945 통신판매업신고 : 2002-경기성남-0048 <a href="javascript:void(0)" onclick="window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1028142945 ', 'windowPop', 'width=750, height=700, left=500, top=350, resizable = yes')" title="새창열림">사업자정보확인</a></p>
-                <p class="service"><span>기업 상담전화</span> : 1588-0114(유료), 유선전화(국번없이) 100, 휴대폰(지역번호)+100</p>
-                <p class="copyright">Copyrightⓒ 2022 kt corp. All rights reserved.</p>
-                <!-- <div class="footer_bi">
-                    <a href="https://biz.kt.com" title="KT 기업 사이트로 이동"><img src="../resource/images/common/footer_bi.png" alt="kt"></a>
-                </div>   -->
-            </div>            
-            <div class="sns_info">
-                <a href="https://blog.naver.com/ktenterprise" target="_blank" title="KT Enterprise 블로그 새창열림"><img src="../resource/images/common/ico_sns_b.png" alt="blog"></a>
-                <!-- <a href="https://www.facebook.com/withKTgroup" target="_blank" title="KT 페이스북 새창열림"><img src="/resource/images/common/ico_sns_f.png" alt="facebook"></a> -->
-                <a href="https://www.facebook.com/kt.corp" target="_blank" title="KT 페이스북 새창열림"><img src="../resource/images/common/ico_sns_f.png" alt="facebook"></a>
-                <a href="https://twitter.com/kt_corp" target="_blank" title="KT 트위터 새창열림"><img src="../resource/images/common/ico_sns_t.png" alt="twitter"></a><!-- title, alt 2020-12-29 수정 -->
-                <a href="https://youtube.com/c/KTBiz" target="_blank" title="KT 유튜브 새창열림"><img src="../resource/images/common/ico_sns_y.png" alt="youtube"></a>
-                <!-- <a href="https://www.Instagram.com/enterprise.kt" target="_blank" title="KT 인스타그램 새창열림"><img src="/resource/images/common/ico_sns_i.png" alt="instagram"></a> -->
-                <a href="https://post.naver.com/my.nhn?memberNo=30305360" target="_blank" title="KT 네이버 포스트 새창열림"><img src="../resource/images/common/ico_sns_p.png" alt="post"></a>
-            </div>
-        </div>
-    </div>
-    <div class="inner kt_mb">
-        <div class="foot_link">
-            <ul class="link bar">
-                <li><a href="https://corp.kt.com/html/etc/agreement_01.html" target="_blank" title="새창열기">이용약관</a></li><!-- title 2020-12-29 수정 -->
-                <li><a href="https://corp.kt.com/html/etc/agreement_04.html" target="_blank" title="새창열기">기업상품 약관</a></li><!-- title 2020-12-29 수정 -->
-                <li><a href="https://corp.kt.com/html/etc/legal.html" target="_blank" title="새창열기">법적고지</a></li><!-- title 2020-12-29 수정 -->
-            </ul>
-            <ul class="link bar">
-                <!-- [D] : 개인정보처리방침 출력은 상황에 따라 다릅니다.  -->
-                <!-- enterprise.kt.com 로 진입했을때 --><li><a href="../cs/privacy.do.html" title="새창열기"><strong>개인정보처리방침</strong></a></li>
-                <!-- mybiz.kt.com 로 진입했을때 --><!-- <li><a href="https://corp.kt.com/html/etc/privacy.html" title="페이지이동"><strong>개인정보처리방침</strong></a></li>  -->
-                <li><a href="https://corp.kt.com/html/sustain/transparent/ethics_03.html" target="_blank" title="새창열기">윤리위반신고</a></li><!-- title 2020-12-29 수정 -->
-                <!-- <li><a href="https://corp.kt.com/html/sustain/transparent/ethics_03.html" target="_blank" title="페이지이동">윤리위반신고</a></li> -->
-                <!-- <li><a href="https://mybiz.kt.com/masterreq/AmLogin.do" target="_blank" title="페이지이동">법인명의 본인 확인 신청</a></li> -->
-            </ul>
-        </div>
-        <div class="address_info">
-            <p class="service"><span>기업 상담전화</span>1588-0114(유료), 유선전화(국번없이) 100, 휴대폰(지역번호)+100</p>
-            <p class="address">(주)케이티 대표이사 구현모 경기도 성남시 분당구 불정로 90 (정자동)
-                <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1028142945&apv_perm_no=" target="_blank" title="새창열림">사업자정보확인</a>
-            </p>
-            <p class="copyright">Copyrightⓒ 2022 kt corp. All rights reserved.</p>
+        <div class="cmd">
+            <div class="cmd1"><input type="button" name="save" class="button" id="save" value="제출"></div>
+            <!-- <div class="cmd2"><input type="button" name="btnclose" class="button" value="취소"></div> -->
         </div>
     </div>
 </div>

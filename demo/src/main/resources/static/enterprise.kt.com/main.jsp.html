@@ -408,52 +408,19 @@ $(function() {
 
         });
         </script>
-        <div class="main_head_news_wrap" id="main_head_news_wrap">
+        <!-- <div class="main_head_news_wrap" id="main_head_news_wrap">
             <div class="full_wrap">
                 <div class="inner_cont">
 					<div class="box">
                         <div class="roll_wrap" data-ui-name="main_news_rolling">
                             <ul id="pcTotal">
-                               <!-- <li>
-									<div><span class="icon_dx">DX STORY</span></div>
-									<a href="https://enterprise.kt.com">
-										<span>금융권 인공지능 기반 챗봇 서비스 동향 및 대비방안 금융권 인공지능 기반 챗봇 서비스 동향 및 대비방안 11금융권 인공지능 기반 챗봇 서비스 동향 및 대비방안 금융권 인공지능 기반 챗봇 서비스 동향 및 대비방안</span>
-										<span class="date">2022.02.02</span>
-									</a>
-								</li> -->
                             </ul>
                         </div>
                     </div>
-					<!--
-                    <div class="box1">
-                        <span class="icon">DX STORY</span>
-                        <div class="roll_wrap" data-ui-name="main_news_rolling">
-                            <ul id="dxStory">
-                                <!-- <li><a href="https://enterprise.kt.com">[2021.4.12] 11금융권 인공지능 기반 챗봇 서비스 동향 및 대비방안 금융권 인공지능 기반 챗봇 서비스 동향 및 대비방안</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box2">
-                        <span class="icon">언론보도</span>
-                        <div class="roll_wrap" data-ui-name="main_news_rolling">
-                            <ul id="mediaReport">
-                                <!-- <li><a href="#"><span class="sbj">[아주초대석] 11신수정 KT 부사장 [아주초대석] 신수정 KT 부사장 [아주초대석] 신수정 KT 부사장</span><span class="date">2021.04.13</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box3">
-                        <span class="icon">NOTICE</span>
-                        <div class="roll_wrap" data-ui-name="main_news_rolling">
-                            <ul id="notice">
-                                <!--
-                                <li><a href="#"><span class="sbj">11개인정보처리방침 변경 개인정보처리방침 변경 개인정보처리방침 변경 개인정보처리방침 변경</span><span class="date">2021.04.13</span></a></li>
-                            </ul>
-                        </div>
-                    </div> -->
                     <button type="button" class="news_close"><span>하루 동안 보지 않기</span></button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="m_main_news" id="m_main_news">
             <div class="inner_cont">
@@ -494,11 +461,9 @@ $(function() {
 	<input type="hidden" id="logoutUrl" value="https://login.kt.com/wamui/ComSSOLogout.do?urlcd=">
 	<input type="hidden" id="mloginUrl" value="https://login.kt.com/wamui/AthMobile.do?mRt=">
 	<input type="hidden" id="mlogoutUrl" value="https://login.kt.com/wamui/ComSSOLogout.do?mRt=">
-	<div id="kt-head" class="kt-head">
+	<div id="kt-head" class="kt-head fixed">
         <div class="in-sec">
-        	<h1 class="logo"><a href="main.html"><img src="./resource/images/common/logo_ktenterprise_w.png" alt="KT Enterprise logo"
-                    
-                ></a><span>KT Enterprise</span></h1>
+        	<h1 class="logo"><img src="kt_logo_w.png" alt="KT Enterprise logo"><span>KT Enterprise</span></h1>
         		<div id="gnb" class="gnb type1">
                 <ul class="depth1">
                 	<li><a href="au/P_AU_ID_SM.do.html" class="item">About Us</a>
@@ -3354,7 +3319,76 @@ $(function() {
 	<!--// div.ktWarp -->
 
     <style>
-
+  /* Wobble Horizontal */
+  @-webkit-keyframes hvr-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    }
+    @keyframes hvr-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    }
+    .hvr-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+    .hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
+    -webkit-animation-name: hvr-wobble-horizontal;
+    animation-name: hvr-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    }
         .modal-top {
             width: 600px;
             height: 500px;
@@ -3402,7 +3436,7 @@ $(function() {
         /* .dlg-h .dlg-bb{display: inline;}
         .dlg-h .dlg-tb{display: inline;}
         .dlg-h .dlg-tbold{display: inline;} */
-        .dlg-bb{font-family: 'kt_modal_font'; font-weight: 900; background-color: #92B5F1;}
+        .dlg-bb{font-family: 'kt_modal_font'; font-weight: 900; background-color: #cadbf7;}
         .dlg-tb{font-family: 'kt_modal_font'; font-weight: 900; color: #4272d9;}
         .dlg-tbold{font-family: 'kt_modal_font'; font-weight: 900;}
         
@@ -3454,7 +3488,7 @@ $(function() {
         }
         /* 빠른 찾기 버튼 */
         .btn1:hover{color: #fff; background: #4272d9; border: 1px solid #4272d9; font-weight: 900;}
-        .btn1{color: #4272d9; background: #fff; border: 1px solid #4272d9; font-weight: 900; width: 400px; height:50px; padding: 12px 40px;}
+        .btn1{color: #4272d9; background: #fff; border: 1px solid #4272d9; font-weight: 900; width: 400px; height:50px; padding: 10px 40px;}
         /* 홈으로 가기 버튼
         .btn2:hover{color: #fff; background: #6199B7; border: 1px solid #6199B7;font-weight: bold;}
         .btn2{color: #6199B7; background: #fff; border: 1px solid #6199B7;font-weight: bold;}
@@ -3503,12 +3537,12 @@ $(function() {
                                 <!-- <span class="close">&times;</span> -->
                                 <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
                                 <h2 id='dlg-header'>
-                                        <span class="dlg-bb">맞춤형 KT 서비스를</span><br><br>
-                                        <span class="dlg-tb">쉽고 빠르게</span>&nbsp;
+                                        <span class="dlg-tbold">맞춤형 KT 서비스를</span><br><br>
+                                        <span class="dlg-tb dlg-bb">쉽고 빠르게</span>&nbsp;
                                         <span class="dlg-tbold">찾아보시겠습니까?</span>  
                                 </h2>
                                 <div>
-                                    <img src="./images/idx/kt_charcter.png" style="width: 350px; height: 250px;"/>
+                                    <img src="./images/idx/kt_charcter.png" style="width: 350px; height: 250px;" class="hvr-wobble-horizontal"/>
                                 </div>
                                 <div id='dlg-prompt'>
                                     <div class='button positive btn1' onclick="location.href='../front/survey_1/survey.html'">찾기&nbsp;<i class="fa-solid fa-magnifying-glass"></i>
