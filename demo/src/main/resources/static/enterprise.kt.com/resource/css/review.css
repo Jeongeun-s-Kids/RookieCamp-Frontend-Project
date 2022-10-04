@@ -6,7 +6,7 @@
 #review_menu{
     z-index: 100;
     position: fixed;
-    top:20%;
+    top:3%;
     margin-left: 10px;
     text-align: center;
     width: 200px;
@@ -26,6 +26,7 @@
     /* background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%); */
+    box-shadow: 0 0px 12px -7px rgba(0,0,0,1);   
 }
 .popup > .contents .title{
 

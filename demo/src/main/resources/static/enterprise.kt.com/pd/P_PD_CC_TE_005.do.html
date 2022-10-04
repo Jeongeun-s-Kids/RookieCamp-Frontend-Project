@@ -136,6 +136,13 @@ $(function() {
     }, 500);
 });
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function msg()
+	{
+		swal("제출 완료!","", "success");
+	};
+</script>
 
 <!-- Google Tag Manager (noscript) -->
 <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNVR37F" 
@@ -981,7 +988,7 @@ try{
                                     </div>
                                 </div>
                                 <div class="cmd">
-                                    <div class="cmd1"><input type="button" name="save" class="button" id="save" value="제출"></div>
+                                    <div class="cmd1"><input type="button" name="save" class="button" id="save" value="제출" onclick="msg()"></div>
                                     <!-- <div class="cmd2"><input type="button" name="btnclose" class="button" value="취소"></div> -->
                                 </div>
                             </div>
