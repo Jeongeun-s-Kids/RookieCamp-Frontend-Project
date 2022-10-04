@@ -36,15 +36,14 @@ $(document).ready(function(){
             data: JSON.stringify(params),
             success:function(res){
                 let resultList = [];
-                let resultURL = [];
+                // let resultURL = [];
                 $('#result_num').empty();
                 $("#result_num").append(Object.keys(res).length);
                 $('#card_list').empty();
                 res.forEach(result => {
-
-                    resultList.push(result.name);
-                    resultURL.push(result.link);
-
+                    if(!resultList.includes(result.category)){
+                        resultList.push(result.category);
+                    }
                     let str = '<div class="lists new-cursor" onclick="location.href=' + "'" + result.link + "'" + ';">'
                     str +='<dl class="prod_info">' 
                             + '<dt class="description">' 
@@ -55,9 +54,8 @@ $(document).ready(function(){
 
                     $("#card_list").append(str);
                 });
-
+                console.log(resultList);
                 localStorage.setItem('resultList', JSON.stringify(resultList));
-                localStorage.setItem('resultURL', JSON.stringify(resultURL));
             },
             error:function(XMLHttpRequest, textStatus, errorThrown){
                 alert('통신 실패.');
@@ -70,5 +68,10 @@ $(document).ready(function(){
 function fnMove(seq){
     console.log('move');
     var offset = $("#recommend_"+ seq).offset();
+    $('html, body').animate({scrollTop : offset.top}, 400);
+}
+function fnMove1(seq){
+    console.log('move');
+    var offset = $(".top_"+ seq).offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
 }

@@ -1,7 +1,7 @@
 insert into product(name, type, category, link,icon,content) values('링고비즈', 'food','communication',  '../../enterprise.kt.com/pd/P_PD_CC_TE_005.do.html','ringobiz.png','365일 내 매장을 저렴하게 홍보하는 특별한 통화연결음 (전화안내멘트)');
 insert into product(name, type, category, link,icon,content) values('발신정보알리미', 'food','communication', '../../enterprise.kt.com/pd/P_PD_CC_TE_006.do.html','barsinJungbo.png','우리 회사/매장의 상호명을 표시해주는 서비스');
 insert into product(name, type, category, link,icon,content) values('위치문자', 'food','communication', '../../enterprise.kt.com/pd/P_PD_CC_CM_007.do.html','gpsmessage.png','"고객 위치"기반의 타겟 마케팅 서비스를 제공합니다.');
-insert into product(name, type, category, link,icon,content) values('가게정보알림메시지(소상공인형)', 'food','communication', '../../enterprise.kt.com/pd/P_PD_CC_CM_005.do.html','store_info_message.png','걸려온 전화가 끝나면 알아서 홍보문자를 보내주는 우리가게 도우미');
+insert into product(name, type, category, link,icon,content) values('가게정보알림메시지 (소상공인형)', 'food','communication', '../../enterprise.kt.com/pd/P_PD_CC_CM_005.do.html','store_info_message.png','걸려온 전화가 끝나면 알아서 홍보문자를 보내주는 우리가게 도우미');
 insert into product(name, type, category, link,icon,content) values('콜체크인', 'food','communication', '../../enterprise.kt.com/pd/P_PD_CC_IN_005.do.html','callcheckin.png','전화 한 통으로 간편하게 출입등록을 할 수 있는 코로나 방역 특화 서비스');
 insert into product(name, type, category, link,icon,content) values('안심번호 0502', 'food','communication','../../enterprise.kt.com/pd/P_PD_CC_IN_004.do.html','safenumber.png','이용자의 개인정보를 지켜주는 가상번호 서비스');
 insert into product(name, type, category, link,icon,content) values('전국대표번호', 'food','communication','../../enterprise.kt.com/pd/P_PD_CC_IN_001.do.html','daponumber.png','전국 대리점 번호가 하나의 대표번호로 통합되는 서비스');
