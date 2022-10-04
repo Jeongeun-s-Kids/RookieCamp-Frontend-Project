@@ -21,6 +21,9 @@
     <link href="css/common.css" rel="stylesheet" />
     <link href="css/content.css" rel="stylesheet" />
     <link href="css/review.css" rel="stylesheet" />
+    <!-- 퍼블리싱 css 시작 -->
+    <link rel="stylesheet" href="css/common_kt.css" />
+    <!-- 퍼블리싱 css 끝 -->
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/scripts.js"></script>
@@ -65,15 +68,105 @@
             text-align: left;
         }
 
-    </style>
-    <!-- <script>
+        @font-face {
+            font-family: 'kt_font';
+            src: url('css/fonts/KTB.woff') format('truetype');
+        }
+        *{font-family:'kt_font';}
 
-        
-    </script> -->
+    </style>
+    <script>
+
+        let test = {}
+
+        $(document).ready(function(){
+            $('#resultBtn').click(function(){
+                console.log('clicked');
+                var names = {};
+                var idx=1;
+                var params={
+                    "cnt":idx,
+                    "category": "food",
+                }
+                $('#lists_3 input:checked').each(function(){
+                    
+                    params['product'+(idx++)] = this.value;
+                    
+                });
+                idx--;
+                params['cnt'] = idx;
+                console.log(params);
+                var query_url = 'http://localhost:9999/product'
+                switch(idx){
+                    case 1:
+                        query_url += '/productOne';
+                        break;
+                    case 2:
+                        query_url += '/productTwo';
+                        break;
+                    case 3:
+                        query_url += '/productThree';
+                        break;
+                }
+            
+                $.ajax({
+                    headers: { 
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                    },
+                    type:'POST',
+                    url:query_url,
+                    data: JSON.stringify(params),
+                    success:function(res){
+                        $('#result_num').empty();
+                        $("#result_num").append(Object.keys(res).length);
+                        $('#card_list').empty();
+                        res.forEach(result => {
+                            let str = '<div class="lists">'
+                            str +='<dl class="prod_info" onclick="location.href=' + "'" + result.link + "'" + ';">' 
+                                    + '<dt class="description">' 
+                                    + '<img class="ico" src=' + "'" + './res/icons/'+ result.category + '/' + result.icon + "'" + 'style="width: 70px; height:70px;" alt=""/>'
+                                    + '<span>'+ result.name + '</span>' + '</dt>'
+                                    + '<dd class="description">' + result.content + '</dd>'
+                                    + '</dl></div>';
+
+                            $("#card_list").append(str);
+                        });
+
+
+
+                    },
+                    error:function(XMLHttpRequest, textStatus, errorThrown){
+                        alert('통신 실패.');
+                        console.log('통신 실패.');
+                    }
+                });
+            });
+        });
+        function fnMove(seq){
+            console.log('move');
+            var offset = $("#recommend_"+ seq).offset();
+            $('html, body').animate({scrollTop : offset.top}, 400);
+        }
+    </script>
 </head>
 
 <body>
     <div id="kt-head" class="kt-head">
+        <div class="in-sec">
+        	<h1 class="logo" ><a href="main.jsp"><img src="img/gnbLogo_p.png" alt="KT Enterprise logo" /></a><span>KT Enterprise</span></h1>
+        		<div id="gnb" class="gnb type1">
+                    <ul class="depth1">
+                        <li><a href="/au/P_AU_ID_SM.do" class="item">About Us</a></li>
+                        <li><a href="/pd/P_PD_AI_SM.do" class="item">상품/서비스</a></li>
+                        <li><a href="/sl/P_SL_FN_001.do" class="item">산업</a></li>
+                        <li><a href="/bt/P_BT_SM.do" class="item">DX Insight</a></li>
+                        <li><a href="/cs/P_CS_FQ_SC_001.do" class="item">고객지원</a></li>
+                    </ul>
+                </div>
+        </div>
+    <div id="kt-head" class="kt-head">
+    </div>
     </div>
     <!-- survey page start-->
     <div id="containers" aria-hidden="false">
@@ -233,36 +326,6 @@
 
 
 
-
-    <!-- review page start-->
-    <div class="popup">
-        <div class="contents">
-            <div class="title">도움이 되셨나요? 불만족하셨다면 이유를 적어주세요</div>
-            <div class="star">
-                <form name="myform" id="myform" method="post" action="./save">
-                    <fieldset>
-                        <!-- <legend>만족도 조사</legend> -->
-                        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
-                        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
-                        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
-                        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
-                        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="review">
-                <!-- <div class="warning_msg"><br>불만족하셨다면 이유를 적어주세요 서비스 품질 향상에 도움이 됩니다 :)</div> -->
-                <div class="input-box">
-                    <input id="review_text" type="text" name="review_text">
-                </div>
-            </div>
-        </div>
-        <div class="cmd">
-            <div class="cmd1"><input type="button" name="save" class="button" id="save" value="제출"></div>
-            <!-- <div class="cmd2"><input type="button" name="btnclose" class="button" value="취소"></div> -->
-        </div>
-    </div>
-    <!-- review page end-->
     <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
