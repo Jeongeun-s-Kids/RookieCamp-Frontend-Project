@@ -136,12 +136,19 @@ $(function() {
     }, 500);
 });
 </script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
 <script>
     function msg()
 	{
-		swal("제출 완료!","", "success");
-	};
+		Swal.fire({
+            title:"제출 완료!", 
+            icon: "success", 
+            confirmButtonColor: '#92b5f1', // confrim 버튼 색깔 지정
+        }).then(result=> {
+        });
+	}
 </script>
 
 <!-- Google Tag Manager (noscript) -->
