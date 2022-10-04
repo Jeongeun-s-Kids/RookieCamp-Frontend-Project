@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
     if(localStorage.getItem('resultList')){
-        // console.log(localStorage.getItem('resultList'));
+        console.log(localStorage.getItem('resultList'));
         let results = JSON.parse(localStorage.getItem('resultList'));
         let urls = JSON.parse(localStorage.getItem('resultURL'));
         results.forEach(result => {
