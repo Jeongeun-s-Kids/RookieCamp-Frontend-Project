@@ -147,6 +147,9 @@ $(function() {
             icon: "success", 
             confirmButtonColor: '#92b5f1', // confrim 버튼 색깔 지정
         }).then(result=> {
+            if(result.isConfirmed) {
+                location.reload();
+            }
         });
 	}
 </script>
