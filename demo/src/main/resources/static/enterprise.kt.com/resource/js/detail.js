@@ -5,10 +5,7 @@ $(document).ready(function(){
     if(localStorage.getItem('resultList')){
         console.log(localStorage.getItem('resultList'));
         let results = JSON.parse(localStorage.getItem('resultList'));
-        console.log('lsenflwnelnflwnl' + results);
-        // let urls = JSON.parse(localStorage.getItem('resultURL'));
-        // var idx=Object.keys(results).length;
-        // console.log('idx' + idx);
+
         var params={
             "cnt":1,
             "category": "food",
@@ -17,7 +14,16 @@ $(document).ready(function(){
         // idx--;
         // params['cnt'] = idx;
         console.log(params);
-        var query_url = 'http://localhost:9999/product/productOne'
+        let query_url = 'http://localhost:9999/product/productOne'
+
+        // http://localhost:9999/enterprise.kt.com/pd/P_PD_CC_TE_005.do.html#nav_1
+        let cur_url = document.location.href;
+        console.log(cur_url);
+        let url = cur_url.substr(43, 22);
+        console.log(url);
+
+
+
         let idx = 1;
         $('#nav_menu').empty();
         console.log('lengt' + Object.keys(results).length);
@@ -55,11 +61,15 @@ $(document).ready(function(){
                     console.log('--------------------');
                     console.log(res);
                     console.log(Object.keys(res).length);
-                    
+                    // ../../enterprise.kt.com/pd/P_PD_CC_TE_006.do.html
                     res.forEach(result => {
-                        str += '<a href="' + result.link + '">'
+                        // console.log(result.link.substr(27, 22));
+                        if(url != result.link.substr(27, 22)){
+                            str += '<a href="' + result.link + '">'
                                 + result.name
                                 + '</a>'
+                        }
+                        
                     });
                     
                     
