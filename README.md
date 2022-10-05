@@ -2,18 +2,22 @@
 ## Categorization 기반 맞춤형 상품 검색 기능 개발
 KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 
-## 프로젝트 소개
+## 🎈프로젝트 소개
 어쩌구저저구 - 피피티 완료되면 가져오기<br>
-### <b> Architecture </b>
+### 🎨<b> Architecture </b>
 
 <img src="https://user-images.githubusercontent.com/58249219/194001801-eec5b10b-13d8-4041-bf37-b32b9f80af24.PNG" width=600 height=500>
 
-## Demo
-### <b> 흐름도 </b>
+### 🎨<b> ERD </b>
+
+<img src="https://user-images.githubusercontent.com/58249219/194004235-46790c4f-84e8-4173-b34f-ed39492910c5.png" width=700 height=400>
+
+## 🎈Demo
+### 🎨<b> 흐름도 </b>
 
 ![흐름도](https://user-images.githubusercontent.com/58249219/194000944-93a1882a-c511-4e8d-a0d3-bd629ffbf4f1.PNG)
 
-### <b> 페이지 상세 화면 </b>
+### 🎨<b> 페이지 상세 화면 </b>
 - KT Enterprise 메인 페이지에서 맞춤형 상품 검색을 위해 모달창의 '찾기' 버튼 클릭
 
 ![캡처1](https://user-images.githubusercontent.com/58249219/194000124-a007d940-92f4-4d92-b158-36639a67bc6b.PNG)
@@ -34,9 +38,9 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 ![캡처4](https://user-images.githubusercontent.com/58249219/194000937-44e4e798-d469-4f19-a781-383b05270d37.PNG)
 
 
-### <b> 시연영상 추가하기~~ </b>
+### 🎨<b> 시연영상 추가하기~~ </b>
 
-## Skills
+## 🎈Skills
 ![HTML Badge](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white)
 ![Java Badge](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white)
 ![Java Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black)
@@ -55,7 +59,7 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 
 
 
-## Usage
+## 🎈Usage
 <b>1. 터미널에 아래 명령어 실행</b>
 ```
 git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
@@ -74,7 +78,7 @@ git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
 
 
 
-## Contributor
+## 🎈Contributor
 
 |기수|이름|
 |:-----:|:-----:|
@@ -85,7 +89,7 @@ git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
 |[천명철](https://github.com/cmc9595)|백엔드, PM
 
 
-## Project Directory
+## 🎈Project Directory
 ```shell
 RookieCamp-Frontend-Project
 └──                                
