@@ -6,7 +6,7 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 어쩌구저저구 - 피피티 완료되면 가져오기<br>
 ### <b> Architecture </b>
 <p align="center">
-<img src="./docs/기술스택.png">
+<img src="./docs/기술스택.png" width="300" height="300">
 </p>
 
 ## Demo
@@ -18,18 +18,18 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 ### <b> 페이지 상세 화면 </b>
 - KT Enterprise 메인 페이지에서 맞춤형 상품 검색을 위해 모달창의 '찾기' 버튼 클릭
 <p align="center">
-<img src="../docs/캡처1.png" width="300" height="300">
+<img src="./docs/캡처1.png">
 </p>
 
 - 맞춤형 서비스 탐색을 위한 사전 설문조사 진행
 <p align="center">
-<img src="../docs/캡처2.png">
+<img src="./docs/캡처2.png">
 </p>
 
 - 설문조사 결과 기반 맞춤형 서비스 추천 리스트
 - 각 상품 클릭 시 상세 페이지로 이동
 <p align="center">
-<img src="../docs/캡처3.png">
+<img src="./docs/캡처3.png">
 </p>
 
 - 상품 상세 페이지 
@@ -37,7 +37,7 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 - 오른쪽 만족도 조사를 통해 서비스 개선사항 수집
 
 <p align="center">
-<img src="../docs/캡처4.png">
+<img src="./docs/캡처4.png">
 </p>
 
 
@@ -49,6 +49,7 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black">
 <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white">
 <br>
+
 [![H2 database Badge](https://img.shields.io/badge/H2_database-4479A1?style=flat-square&logo=h2&logoColor=white)](https://h2.org/)
 [![SpringBoot Badge](https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white)](https://www.SpringBoot.org/)
 [![Java Badge](https://img.shields.io/badge/java-%23ED8B00?style=flat-square&logo=java&logoColor=white)](https://java.org/)
