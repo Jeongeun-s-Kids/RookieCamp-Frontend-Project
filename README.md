@@ -80,7 +80,7 @@ git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
 
 ## 🎈Contributor
 
-|기수|이름|
+|이름|역할|
 |:-----:|:-----:|
 |[박정은](https://github.com/PJungeun)|디자인 및 프론트
 |[박한나](https://github.com/hanna56)|프론트
