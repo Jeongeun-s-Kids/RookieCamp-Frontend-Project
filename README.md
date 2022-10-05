@@ -6,7 +6,7 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 어쩌구저저구 - 피피티 완료되면 가져오기<br>
 ### <b> Architecture </b>
 <p align="center">
-<img src="./docs/기술스택.png" width="300" height="300">
+<img src="./docs/기술스택.png" width="400" height="300">
 </p>
 
 ## Demo
@@ -17,9 +17,11 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 
 ### <b> 페이지 상세 화면 </b>
 - KT Enterprise 메인 페이지에서 맞춤형 상품 검색을 위해 모달창의 '찾기' 버튼 클릭
-<p align="center">
-<img src="./docs/캡처1.png">
-</p>
+
+<br>
+![캡처1](https://user-images.githubusercontent.com/58249219/194000124-a007d940-92f4-4d92-b158-36639a67bc6b.PNG)
+<br>
+<br>
 
 - 맞춤형 서비스 탐색을 위한 사전 설문조사 진행
 <p align="center">
