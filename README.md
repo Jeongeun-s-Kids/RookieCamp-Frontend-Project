@@ -5,53 +5,43 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 ## 프로젝트 소개
 어쩌구저저구 - 피피티 완료되면 가져오기<br>
 ### <b> Architecture </b>
-<p align="center">
-<img src="./docs/기술스택.png" width="400" height="300">
-</p>
+
+![스킬](https://user-images.githubusercontent.com/58249219/194001801-eec5b10b-13d8-4041-bf37-b32b9f80af24.PNG)
 
 ## Demo
 ### <b> 흐름도 </b>
-<p align="center">
-<img src="./docs/흐름도.png">
-</p>
+
+![흐름도](https://user-images.githubusercontent.com/58249219/194000944-93a1882a-c511-4e8d-a0d3-bd629ffbf4f1.PNG)
 
 ### <b> 페이지 상세 화면 </b>
 - KT Enterprise 메인 페이지에서 맞춤형 상품 검색을 위해 모달창의 '찾기' 버튼 클릭
 
-<br>
 ![캡처1](https://user-images.githubusercontent.com/58249219/194000124-a007d940-92f4-4d92-b158-36639a67bc6b.PNG)
-<br>
-<br>
 
 - 맞춤형 서비스 탐색을 위한 사전 설문조사 진행
-<p align="center">
-<img src="./docs/캡처2.png">
-</p>
+
+![캡처2](https://user-images.githubusercontent.com/58249219/194000845-b8015e07-853d-4ac0-98db-0a749bde8db6.PNG)
 
 - 설문조사 결과 기반 맞춤형 서비스 추천 리스트
 - 각 상품 클릭 시 상세 페이지로 이동
-<p align="center">
-<img src="./docs/캡처3.png">
-</p>
+
+![캡처3](https://user-images.githubusercontent.com/58249219/194000928-a192ac36-44ac-4444-bcb9-c43f6cc7ff54.PNG)
 
 - 상품 상세 페이지 
 - 왼쪽 ‘맞춤 서비스’ 배너를 통해 다른 맞춤 서비스 상세 페이지로 바로 이동 가능 
 - 오른쪽 만족도 조사를 통해 서비스 개선사항 수집
 
-<p align="center">
-<img src="./docs/캡처4.png">
-</p>
+![캡처4](https://user-images.githubusercontent.com/58249219/194000937-44e4e798-d469-4f19-a781-383b05270d37.PNG)
 
 
 ### <b> 시연영상 추가하기~~ </b>
 
 ## Skills
-<img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white">
-<img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black">
-<img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white">
+[![HTML Badge](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white)]()
+[![Java Badge](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white)]
+[![Java Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black)](
+[![Java Badge](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white)]
 <br>
-
 [![H2 database Badge](https://img.shields.io/badge/H2_database-4479A1?style=flat-square&logo=h2&logoColor=white)](https://h2.org/)
 [![SpringBoot Badge](https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white)](https://www.SpringBoot.org/)
 [![Java Badge](https://img.shields.io/badge/java-%23ED8B00?style=flat-square&logo=java&logoColor=white)](https://java.org/)
