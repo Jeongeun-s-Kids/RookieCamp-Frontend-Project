@@ -1,10 +1,8 @@
 # [KT Enterprise](https://enterprise.kt.com/main.jsp) 웹 사이트 개선 프로젝트
 ## Categorization 기반 맞춤형 상품 검색 기능 개발
----
 KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 
 ## 프로젝트 소개
----
 어쩌구저저구 - 피피티 완료되면 가져오기<br>
 ### <b> Architecture </b>
 <p align="center">
@@ -12,7 +10,6 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 </p>
 
 ## Demo
----
 ### <b> 흐름도 </b>
 <p align="center">
 <img src="./docs/흐름도.png">
@@ -21,18 +18,18 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 ### <b> 페이지 상세 화면 </b>
 - KT Enterprise 메인 페이지에서 맞춤형 상품 검색을 위해 모달창의 '찾기' 버튼 클릭
 <p align="center">
-<img src="./docs/캡처1.png">
+<img src="../docs/캡처1.png" width="300" height="300">
 </p>
 
 - 맞춤형 서비스 탐색을 위한 사전 설문조사 진행
 <p align="center">
-<img src="./docs/캡처2.png">
+<img src="../docs/캡처2.png">
 </p>
 
 - 설문조사 결과 기반 맞춤형 서비스 추천 리스트
 - 각 상품 클릭 시 상세 페이지로 이동
 <p align="center">
-<img src="./docs/캡처3.png">
+<img src="../docs/캡처3.png">
 </p>
 
 - 상품 상세 페이지 
@@ -40,20 +37,18 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 - 오른쪽 만족도 조사를 통해 서비스 개선사항 수집
 
 <p align="center">
-<img src="./docs/캡처4.png">
+<img src="../docs/캡처4.png">
 </p>
 
 
 ### <b> 시연영상 추가하기~~ </b>
 
 ## Skills
----
- <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white">
- <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white">
- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black">
- <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white">
- <br>
-
+<img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black">
+<img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white">
+<br>
 [![H2 database Badge](https://img.shields.io/badge/H2_database-4479A1?style=flat-square&logo=h2&logoColor=white)](https://h2.org/)
 [![SpringBoot Badge](https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white)](https://www.SpringBoot.org/)
 [![Java Badge](https://img.shields.io/badge/java-%23ED8B00?style=flat-square&logo=java&logoColor=white)](https://java.org/)
@@ -68,7 +63,6 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 
 
 ## Usage
----
 <b>1. 터미널에 아래 명령어 실행</b>
 ```
 git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
@@ -88,7 +82,6 @@ git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
 
 
 ## Contributor
----
 
 |기수|이름|
 |:-----:|:-----:|
@@ -100,7 +93,6 @@ git clone https://github.com/Jeongeun-s-Kids/RookieCamp-Frontend-Project.git
 
 
 ## Project Directory
----
 ```shell
 RookieCamp-Frontend-Project
 └──                                
