@@ -6,7 +6,7 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 어쩌구저저구 - 피피티 완료되면 가져오기<br>
 ### <b> Architecture </b>
 
-![스킬](https://user-images.githubusercontent.com/58249219/194001801-eec5b10b-13d8-4041-bf37-b32b9f80af24.PNG)
+<img src="https://user-images.githubusercontent.com/58249219/194001801-eec5b10b-13d8-4041-bf37-b32b9f80af24.PNG" width=600 height=500>
 
 ## Demo
 ### <b> 흐름도 </b>
@@ -37,10 +37,10 @@ KT 22-3 신입사원 루키캠프 프론트엔드 교육 프로젝트
 ### <b> 시연영상 추가하기~~ </b>
 
 ## Skills
-[![HTML Badge](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white)]()
-[![Java Badge](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white)]
-[![Java Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black)](
-[![Java Badge](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white)]
+![HTML Badge](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white)
+![Java Badge](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=CSS3&logoColor=white)
+![Java Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black)
+![Java Badge](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white)
 <br>
 [![H2 database Badge](https://img.shields.io/badge/H2_database-4479A1?style=flat-square&logo=h2&logoColor=white)](https://h2.org/)
 [![SpringBoot Badge](https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white)](https://www.SpringBoot.org/)
