@@ -43,8 +43,8 @@ KT의 B2B 사이트인 KT Enterprise의 고객 이탈률을 낮추고 계약 성
 ![캡처4](https://user-images.githubusercontent.com/58249219/194000937-44e4e798-d469-4f19-a781-383b05270d37.PNG)
 
 
-### 🎨<b> 시연영상 추가하기~~ </b>
-[![Video Label](https://img.youtube.com/vi/GJyVJxZ5QE4/0.jpg)]([https://youtu.be/GJyVJxZ5QE4](https://www.youtube.com/watch?v=GJyVJxZ5QE4))
+### 🎨<b> 시연영상 </b>
+[![Video Label](https://img.youtube.com/vi/GJyVJxZ5QE4/0.jpg)](https://youtu.be/GJyVJxZ5QE4)
 
 ## 🎈Skills
 ![HTML Badge](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=HTML5&logoColor=white)
